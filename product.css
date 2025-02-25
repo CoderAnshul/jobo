@@ -816,6 +816,7 @@ body {
     border: 2px solid rgba(0,0,0,0.7);
     border-radius: 14px;
     z-index: 1;
+    
 }
 
 .video-container {
@@ -830,6 +831,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    overflow: hidden;
 }
 
 .play-button {
