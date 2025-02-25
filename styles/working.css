@@ -376,18 +376,24 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.left-section{
+    margin-top: 30px;
 }
 
 .logo {
     width: 200px;
     height: 80px;
-    margin-bottom: 30px;
 }
 
 .contact-info {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-item {

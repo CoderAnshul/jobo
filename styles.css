@@ -813,7 +813,9 @@ body {
 .contact-button:hover{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
-
+.contact-button:hover .arrow-circle{
+    margin-left:8px;
+}
 
 /* ----------------- footer -------------  */
 /* ----------------- footer ------------- */
