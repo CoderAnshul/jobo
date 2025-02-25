@@ -21,13 +21,26 @@ body {
 
 .container{
     max-width: 1400px;
-    padding: 20px;
+    /* padding: 20px; */
+}
+.container-heading{
+    padding: 0px 90px;
 }
 .title {
     font-size: 2.8rem;
     font-weight: bold;
     color: #000;
     margin-bottom: 35px;
+    position: relative;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 120px;
+    height: 6px;
+    background-color: #FF7518; 
 }
 /* Navigation Styles */
 .navbar {
@@ -362,11 +375,12 @@ body {
 }
 
 .text-about {
-    font-size: 24px;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.4;
     margin-bottom: 10px;
     text-align: justify;
-    font-weight: 600;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 
@@ -423,17 +437,19 @@ body {
   }
 
   .section-wrapper{
-    margin: 0 auto;
+    margin: 0;
   }
   
   
   /* Tabs navigation */
   .tabs-nav {
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
     overflow-x: auto;
     background-color: white;
     border-bottom: 1px solid #e0e0e0;
-    padding: 0 20px;
+    padding: 0 90px;
   }
   
   .tab-item {
@@ -466,9 +482,10 @@ body {
   
   /* Tab content */
   .tab-content {
-    padding: 50px 20px;
+    width: 100vw;
+    padding: 50px 90px;
     display: none;
-    background-color: #F6F5F5;
+    background-color: #f3f3f3;
   }
   
   .tab-content.active {
@@ -484,11 +501,10 @@ body {
   }
   
   .tab-content p {
-    font-size: 24px;
+    font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 10px;
-    text-align: justify;
-    font-weight: 600;
+    font-weight: 500;
     max-width: 900px;
   }
   
@@ -547,6 +563,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    margin-top: 50px;
   }
   
   .process-step {
@@ -602,7 +619,7 @@ body {
   .step-connector {
     flex: 1;
     height: 2px;
-    background-color: #e0e0e0;
+    background-color: #FF7518;
     margin-top: 45px;
   }
   
@@ -705,6 +722,19 @@ body {
   .icon-support { background-image: url('../images/steps/step5.png'); }
   
   /* Responsive adjustments */
+
+  @media (max-width: 1300px){
+
+    .container-heading{
+        padding: 0px 20px;
+    }
+    .tabs-nav{
+        padding: 0px 20px;
+    }
+    .tab-content{
+        padding: 0px 20px;
+    }
+  }
   @media (max-width: 1200px) {
     .process-container {
       max-width: 900px;
@@ -816,7 +846,7 @@ body {
   .team-section {
     background-color: #F6F5F5; /* Light grey background */
     text-align: left;
-    padding: 40px 60px;
+    padding: 40px 300px 40px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -845,7 +875,7 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 12px;
-    width: 220px;
+    width: 300px;
     max-width: 250px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -937,9 +967,10 @@ body {
 /* Container for Factory Items */
 .factory-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
     justify-content: center;
+    place-items: center;
 }
 
 /* Individual Factory Item */
