@@ -400,7 +400,7 @@ p {
 /* Hero Section Styles */
 .hero {
     position: relative;
-    height: 396px;
+    height: 382px;
     width: 100%;
     background-image: url(../images/banner/aboutBanner.png);
     background-position: bottom;
@@ -554,7 +554,7 @@ p {
     width: 100vw;
     padding: 50px 90px;
     display: none;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
   }
   
   .tab-content.active {
