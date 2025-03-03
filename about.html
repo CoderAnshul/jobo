@@ -791,57 +791,142 @@
 
       // Create the modal content
       modal.innerHTML = `
-  <div class="modal-overlay"></div>
-  <div class="modal-content">
-    <img src="" alt="" class="modal-image">
-    <div class="modal-caption"></div>
-    <button class="modal-close">&times;</button>
-  </div>
-`;
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <img src="" alt="" class="modal-image">
+          <div class="modal-caption"></div>
+          <div class="button-container">
+              <button class="modal-prev">&#10094;</button>
+             <button class="modal-next">&#10095;</button>
+          </div>
+          <button class="modal-close">&times;</button>
+        </div>
+      `;
 
       // Get modal elements
       const modalOverlay = modal.querySelector(".modal-overlay");
       const modalImage = modal.querySelector(".modal-image");
       const modalCaption = modal.querySelector(".modal-caption");
       const closeButton = modal.querySelector(".modal-close");
+      const prevButton = modal.querySelector(".modal-prev");
+      const nextButton = modal.querySelector(".modal-next");
 
-      // Get all factory items
       const factoryItems = document.querySelectorAll(".factory-item");
+      let currentIndex = 0;
+      let currentImageArray = [];
 
-      // Add click event to each factory item
-      factoryItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          // Get image source and caption
-          const imgSrc = this.querySelector("img").src;
-          const caption = this.querySelector("p").textContent;
+      const imagesData = [
+        {
+          basePath: "JOBO SHOWROOM",
+          childImages: [
+            "JOBO SHOWROOM/IMG20231106143440.jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (10).jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (5).jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (6).jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (7).jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (8).jpg",
+            "JOBO SHOWROOM/IMG202311061434402 (9).jpg",
+            "JOBO SHOWROOM/IMG20231106143446.jpg",
+            "JOBO SHOWROOM/IMG20231106143446df.jpg",
+            "JOBO SHOWROOM/IMG20231106143548.jpg",
+            "JOBO SHOWROOM/IMG20231106143624.jpg",
+          ],
+        },
+        {
+          basePath: "CAP WORKSHOP",
+          childImages: [
+            "CAP WORKSHOP/IMG20231106143430.jpg",
+            "CAP WORKSHOP/IMG20231106143434.jpg",
+          ],
+        },
+        {
+          basePath: "CCM WORKSHOP",
+          childImages: [
+            "CCM WORKSHOP/IMG20231105100333.jpg",
+            "CCM WORKSHOP/IMG20231105100912.jpg",
+            "CCM WORKSHOP/IMG202311061434402 (1).jpg",
+            "CCM WORKSHOP/IMG202311061434402 (13).jpg",
+            "CCM WORKSHOP/IMG202311061434402 (14).jpg",
+            "CCM WORKSHOP/IMG202311061434402 (2).jpg",
+            "CCM WORKSHOP/IMG202311061434402 (3).jpg",
+            "CCM WORKSHOP/IMG202311061434402 (4).jpg",
+          ],
+        },
 
-          // Set modal content
-          modalImage.src = imgSrc;
-          modalImage.alt = caption;
-          modalCaption.textContent = caption;
+        {
+          basePath: "MOLD WORKSHOP",
+          childImages: [
+            "MOLD WORKSHOP/IMG20231106150645.jpg",
+            "MOLD WORKSHOP/IMG20231106150748.jpg",
+            "MOLD WORKSHOP/IMG202311061507489.jpg",
+            "MOLD WORKSHOP/IMG20231106150858.jpg",
+            "MOLD WORKSHOP/IMG20231106151115.jpg",
+            "MOLD WORKSHOP/IMG20231106151538.jpg",
+            "MOLD WORKSHOP/IMG20231106160706.jpg",
+          ],
+        },
+        {
+          basePath: "SLITTING MACHINE WORKSHOP",
+          childImages: [
+            "SLITTING MACHINE WORKSHOP/20-july.jpg",
+            "SLITTING MACHINE WORKSHOP/IMG20231103112121.jpg",
+            "SLITTING MACHINE WORKSHOP/IMG20231103112622.jpg",
+            "SLITTING MACHINE WORKSHOP/IMG20231103112625.jpg",
+            "SLITTING MACHINE WORKSHOP/IMG202311061434402 (11).jpg",
+            "SLITTING MACHINE WORKSHOP/IMG202311061434402 (12).jpg",
+          ],
+        },
+      ];
 
-          // Show modal
-          modal.classList.add("active");
-          document.body.style.overflow = "hidden"; // Prevent scrolling
-        });
-      });
+      function openModal(parentIndex, childIndex) {
+        currentParentIndex = parentIndex;
+        currentChildIndex = childIndex;
+        currentImageArray = imagesData[parentIndex].childImages;
 
-      // Close modal when clicking the close button
-      closeButton.addEventListener("click", closeModal);
+        modalImage.src = `./images/factory/PHOTOS/${currentImageArray[childIndex]}`;
+        modalCaption.textContent = imagesData[parentIndex].basePath;
 
-      // Close modal when clicking outside the image
-      modalOverlay.addEventListener("click", closeModal);
-
-      // Close modal function
-      function closeModal() {
-        modal.classList.remove("active");
-        document.body.style.overflow = ""; // Restore scrolling
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
 
-      // Close modal with Escape key
-      document.addEventListener("keydown", function (event) {
+      factoryItems.forEach((item, parentIndex) => {
+        item.addEventListener("click", () => openModal(parentIndex, 0)); // Always open first image on click
+      });
+
+      // Close Modal
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      closeButton.addEventListener("click", closeModal);
+      modalOverlay.addEventListener("click", closeModal);
+
+      // Navigate Previous
+      prevButton.addEventListener("click", () => {
+        currentChildIndex =
+          (currentChildIndex - 1 + currentImageArray.length) %
+          currentImageArray.length;
+        openModal(currentParentIndex, currentChildIndex);
+      });
+
+      // Navigate Next
+      nextButton.addEventListener("click", () => {
+        currentChildIndex = (currentChildIndex + 1) % currentImageArray.length;
+        openModal(currentParentIndex, currentChildIndex);
+      });
+
+      // Keyboard Navigation
+      document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && modal.classList.contains("active")) {
           closeModal();
+        }
+        if (event.key === "ArrowRight" && modal.classList.contains("active")) {
+          nextButton.click();
+        }
+        if (event.key === "ArrowLeft" && modal.classList.contains("active")) {
+          prevButton.click();
         }
       });
     </script>
