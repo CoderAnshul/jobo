@@ -1,544 +1,560 @@
 .navbar {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%,0%);
-    width: 90%;
-    height: 90px;
-    border-radius: 20px;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 60px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+  height: 90px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .logo img {
-    height: 80px;
+  height: 80px;
 }
-.navbar-content{
-    display: flex;
-    align-items: center; 
-    gap: 5px;
-}
-
-.buttons-container {
-    position: absolute;
-    right:10%;
-    top: 10%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center; /* Center align if needed */
-    margin-top: 20px;
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .buttons-container {
-    display: flex;
-    gap: 15px; /* Spacing between buttons */
-    align-items: center;
-    margin-top: 20px;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Center align if needed */
+  margin-top: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px; /* Spacing between buttons */
+  align-items: center;
+  margin-top: 20px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 40px;
-    border-right: 2px solid rgba(0, 0, 0, 0.534);
-    padding-right:20px;
+  display: flex;
+  gap: 40px;
+  border-right: 2px solid rgba(0, 0, 0, 0.534);
+  padding-right: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
 }
 
 .nav-links a.active {
-    color: #FF4B26;
+  color: #ff4b26;
 }
 
 .nav-links a:hover {
-    color: #FF4B26;
+  color: #ff4b26;
 }
 
 .call-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .call-button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .call-button img {
-    height: 20px;
+  height: 20px;
 }
 .search-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .search-button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .search-button img {
-    height: 20px;
+  height: 20px;
 }
 
 .call-button span {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 /* Mobile menu button (hidden by default) */
 .mobile-menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-    z-index: 1001;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .mobile-menu-btn span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #333;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
-
+.jobo-contact-details {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.jobo-container-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 20px 60px;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+}
 /* Media queries for responsiveness */
 @media screen and (max-width: 1024px) {
-    .navbar {
-        padding: 0 30px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .navbar {
-        height: auto;
-        min-height: 80px;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
-    
-    .navbar-content {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100vh;
-        background: #fff;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 30px;
-        padding: 100px 20px 30px;
-        transition: left 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-content.active {
-        left: 0;
-    }
-    
-    .nav-links {
-        flex-direction: column;
-        border-right: none;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.534);
-        padding-right: 0;
-        padding-bottom: 20px;
-        width: 100%;
-        gap: 20px;
-        align-items: center;
-    }
-    
-    .call-button, .search-button {
-        margin-top: 10px;
-    }
-    
-    /* Hamburger to X animation */
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    .mobile-menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    
-    /* Adjust dropdown for mobile */
-    .dropdown {
-        position: static;
-        width: 100%;
-    }
-    
-    .dropdown-menu {
-        position: static;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        padding: 0 0 0 20px;
-        margin-top: 10px;
-        width: 100%;
-    }
-    
-    .dropdown:hover .dropdown-menu,
-    .dropdown.active .dropdown-menu {
-        display: block;
-    }
+  .navbar {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .navbar-content {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 100px 20px 30px;
+    transition: left 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-content.active {
+    left: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.534);
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .call-button,
+  .search-button {
+    margin-top: 10px;
+  }
+
+  /* Hamburger to X animation */
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Adjust dropdown for mobile */
+  .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0 0 0 20px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .navbar {
-        top: 10px;
-        padding: 0 20px;
-        height: 70px;
-    }
-    
-    .logo img {
-        height: 60px;
-    }
+  .navbar {
+    top: 10px;
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .navbar {
-        width: 95%;
-    }
+  .navbar {
+    width: 95%;
+  }
 }
 
 /* New CSS for dropdown */
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown > a::after {
-    content: '▼';
-    font-size: 10px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
+  content: "▼";
+  font-size: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.3s, color 0.3s;
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .dropdown-menu a:hover {
-    background: #f9f9f9;
-    color: #FF4B26;
+  background: #f9f9f9;
+  color: #ff4b26;
 }
 /* Hero Section Styles */
-.banner-wrapper{
-    
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+.banner-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown > a::after {
-    content: '▼';
-    font-size: 10px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
+  content: "▼";
+  font-size: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.3s, color 0.3s;
-    position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
 }
 
 .dropdown-menu a:hover {
-    background: #f9f9f9;
-    color: #FF4B26;
+  background: #f9f9f9;
+  color: #ff4b26;
 }
 
 /* New styles for nested dropdown */
 .sub-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .sub-dropdown > a::after {
-    content: '►';
-    font-size: 10px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+  content: "►";
+  font-size: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .sub-dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #fff;
-    min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
 }
 
 .sub-dropdown:hover .sub-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 
 /* Mobile adjustments for nested dropdown */
 @media screen and (max-width: 900px) {
-    .sub-dropdown-menu {
-        position: static;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        padding: 0 0 0 20px;
-        margin-top: 10px;
-        width: 100%;
-    }
-    
-    .sub-dropdown:hover .sub-dropdown-menu,
-    .sub-dropdown.active .sub-dropdown-menu {
-        display: block;
-    }
-    
-    .sub-dropdown > a::after {
-        right: 0;
-    }
+  .sub-dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0 0 0 20px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .sub-dropdown:hover .sub-dropdown-menu,
+  .sub-dropdown.active .sub-dropdown-menu {
+    display: block;
+  }
+
+  .sub-dropdown > a::after {
+    right: 0;
+  }
 }
 .jobo-contact-page * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .jobo-contact-page {
-    background-color: #f8f9fa;
-    color: #2d3436;
+  background-color: #f8f9fa;
+  color: #2d3436;
 }
 
 .jobo-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
+  margin: 0 70px;
+  padding: 50px 20px;
 }
 
 .jobo-contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
 .jobo-contact-info {
-    flex: 1;
-    min-width: 300px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .jobo-contact-form {
-    flex: 1.5;
-    min-width: 300px;
+  flex: 1.5;
+  min-width: 300px;
+  width: 50%;
 }
 
 .jobo-heading {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #2d3436;
-    position: relative;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #2d3436;
+  position: relative;
 }
 
 .jobo-heading::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
-    background-color: #ff7834;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: #ff7834;
 }
 
 .jobo-address {
-    margin-bottom: 30px;
-    line-height: 1.6;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .jobo-contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .jobo-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #ff7834;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    color: white;
+  width: 40px;
+  height: 40px;
+  background-color: #ff7834;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: white;
 }
 
-.jobo-form-input, .jobo-form-textarea {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    background-color: white;
-    margin-bottom: 20px;
-    font-size: 16px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+.jobo-form-input,
+.jobo-form-textarea {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-.jobo-form-input:focus, .jobo-form-textarea:focus {
-    outline: none;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+.jobo-form-input:focus,
+.jobo-form-textarea:focus {
+  outline: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .jobo-form-textarea {
-    height: 150px;
-    resize: none;
+  height: 150px;
+  resize: none;
 }
 
 .jobo-submit-btn {
-    background-color: #ff7834;
-    color: white;
-    border: none;
-    padding: 16px 40px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
+  background-color: #ff7834;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .jobo-submit-btn:hover {
-    background-color: #f05f23;
-    transform: translateY(-2px);
+  background-color: #f05f23;
+  transform: translateY(-2px);
 }
 
 .jobo-arrow-icon {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .jobo-map-container {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .jobo-map-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 @media (max-width: 768px) {
-    .jobo-contact-wrapper {
-        flex-direction: column;
-    }
-    
-    .jobo-heading {
-        font-size: 32px;
-    }
+  .jobo-contact-wrapper {
+    flex-direction: column;
+  }
+
+  .jobo-heading {
+    font-size: 32px;
+  }
 }
