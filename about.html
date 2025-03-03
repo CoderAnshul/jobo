@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/video.css">
+    <!-- <link rel="stylesheet" href="./styles/about.css"> -->
+     <style>
+      @media screen and (max-width: 768px) {
+        .dropdown{
+          text-align: center;
+        }
+      }
+     </style>
 </head>
 <body>
 
@@ -16,15 +24,29 @@
     </a>
     <div class="navbar-content">
         <div class="nav-links">
-            <a href="#" class="active">Home</a>
+            <a href="/index.html" class="active">Home</a>
             <a href="/about.html">About Us</a>
             <div class="dropdown">
-                <a href="#">Products</a>
+                <a class="workingpage" href="/working.html">Products</a>
                 <div class="dropdown-menu">
-                    <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-                <a href="/product-three.html">36 Cavity Cap Making Machine</a>
-                <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
-                <a href="/product.html">16 Cavity Compression Molding Machine</a>
+                    <div class="sub-dropdown">
+                        <a href="/working.html">Cap Compression Moulding Machine</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="/product.html">16 Cavity Compression Molding Machine</a>
+                            <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
+                            <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+                            <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+                        </div>
+                    </div>
+                    <div class="sub-dropdown">
+                        <a href="#">Auxiliaries</a>
+                        <div class="sub-dropdown-menu">
+                          <a href="/auxiliaries-1.html">Cap Folding Machine</a>
+                          <a href="/auxiliaries-2.html">Cap Cooler Machine</a>
+                          <a href="/auxiliaries-3.html">Cap Slitting Machine</a>
+                          <a href="/auxiliaries-4.html">Cap Lining Machine</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="#">Blog</a>
@@ -42,7 +64,6 @@
             <img src="./images/icons/search.png" alt="search">
         </div>
     </div>
-    
     <div class="mobile-menu-btn">
         <span></span>
         <span></span>
@@ -89,91 +110,93 @@
                 <h2 class="title">What Makes Us Different?</h2>
               </div>
               
-              <div class="tabs-nav">
-                <div class="tab-item active" onclick="changeTab(0)">Always improving</div>
-                <div class="tab-item" onclick="changeTab(1)">Customer First</div>
-                <div class="tab-item" onclick="changeTab(2)">Uncompromised Quality</div>
-                <div class="tab-item" onclick="changeTab(3)">Environmentally Friendly</div>
-                <div class="tab-item" onclick="changeTab(4)">Global Reach</div>
-              </div>
-              
-              <div class="tab-content active" id="tab-0">
-                <div class="content-with-image">
-                  <div class="content-text">
-                    <p>We are always looking for ways to improve our machines. Whether it's by making them faster, more energy-efficient, or easier to operate. Innovation is at the core of everything we do.</p>
-                  </div>
-                  <div class="content-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M2 20h20"></path>
-                      <path d="M5 20V8.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V20"></path>
-                      <path d="M13 20v-7.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V20"></path>
-                      <path d="M8 8.5l-1.1-1.1"></path>
-                      <path d="M16 12l-1.1-1.1"></path>
-                      <path d="M19 10h2"></path>
-                      <path d="M7.80 3.40A6 6 0 0 1 16 8"></path>
-                      <path d="M17 6h2"></path>
-                      <path d="M14 3h2"></path>
-                    </svg>
+              <div style="">
+                <div class="tabs-nav">
+                  <div class="tab-item active" onclick="changeTab(0)">Always improving</div>
+                  <div class="tab-item" onclick="changeTab(1)">Customer First</div>
+                  <div class="tab-item" onclick="changeTab(2)">Uncompromised Quality</div>
+                  <div class="tab-item" onclick="changeTab(3)">Environmentally Friendly</div>
+                  <div class="tab-item" onclick="changeTab(4)">Global Reach</div>
+                </div>
+                
+                <div class="tab-content active" id="tab-0">
+                  <div class="content-with-image">
+                    <div class="content-text">
+                      <p>We are always looking for ways to improve our machines. Whether it's by making them faster, more energy-efficient, or easier to operate. Innovation is at the core of everything we do.</p>
+                    </div>
+                    <div class="content-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 20h20"></path>
+                        <path d="M5 20V8.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V20"></path>
+                        <path d="M13 20v-7.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V20"></path>
+                        <path d="M8 8.5l-1.1-1.1"></path>
+                        <path d="M16 12l-1.1-1.1"></path>
+                        <path d="M19 10h2"></path>
+                        <path d="M7.80 3.40A6 6 0 0 1 16 8"></path>
+                        <path d="M17 6h2"></path>
+                        <path d="M14 3h2"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="tab-content" id="tab-1">
-                <div class="content-with-image">
-                  <div class="content-text">
-                    <p>Our customers are at the heart of everything we do. We listen to your needs and develop solutions that address your specific challenges and requirements.</p>
-                  </div>
-                  <div class="content-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="tab-content" id="tab-2">
-                <div class="content-with-image">
-                  <div class="content-text">
-                    <p>We never compromise on quality. Every machine we build is designed to meet the highest standards of performance, reliability, and durability.</p>
-                  </div>
-                  <div class="content-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
+                
+                <div class="tab-content" id="tab-1">
+                  <div class="content-with-image">
+                    <div class="content-text">
+                      <p>Our customers are at the heart of everything we do. We listen to your needs and develop solutions that address your specific challenges and requirements.</p>
+                    </div>
+                    <div class="content-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="tab-content" id="tab-3">
-                <div class="content-with-image">
-                  <div class="content-text">
-                    <p>We are committed to minimizing our environmental impact. Our machines are designed to be energy-efficient and our manufacturing processes prioritize sustainability.</p>
-                  </div>
-                  <div class="content-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M2 22a10 10 0 0 1 20 0"></path>
-                      <path d="M12 2v8"></path>
-                      <path d="M12 6l4-4"></path>
-                      <path d="M12 6l-4-4"></path>
-                    </svg>
+                
+                <div class="tab-content" id="tab-2">
+                  <div class="content-with-image">
+                    <div class="content-text">
+                      <p>We never compromise on quality. Every machine we build is designed to meet the highest standards of performance, reliability, and durability.</p>
+                    </div>
+                    <div class="content-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="tab-content" id="tab-4">
-                <div class="content-with-image">
-                  <div class="content-text">
-                    <p>With operations and customers around the world, we have the global reach to provide support wherever you need it, backed by local expertise.</p>
+                
+                <div class="tab-content" id="tab-3">
+                  <div class="content-with-image">
+                    <div class="content-text">
+                      <p>We are committed to minimizing our environmental impact. Our machines are designed to be energy-efficient and our manufacturing processes prioritize sustainability.</p>
+                    </div>
+                    <div class="content-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 22a10 10 0 0 1 20 0"></path>
+                        <path d="M12 2v8"></path>
+                        <path d="M12 6l4-4"></path>
+                        <path d="M12 6l-4-4"></path>
+                      </svg>
+                    </div>
                   </div>
-                  <div class="content-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
+                </div>
+                
+                <div class="tab-content" id="tab-4">
+                  <div class="content-with-image">
+                    <div class="content-text">
+                      <p>With operations and customers around the world, we have the global reach to provide support wherever you need it, backed by local expertise.</p>
+                    </div>
+                    <div class="content-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -181,10 +204,10 @@
     </div>
 
     <div class="process container" style="margin-top: 50px;">
-        <h2 class="title">OUR PROCESS, STEP BY STEP</h2>
+        <h2 class="title">Our Process Step by Step</h2>
         <div class="process-container">
             <!-- Desktop Layout -->
-            <div class="desktop-layout">
+            <div class="desktop-layout" >
               <!-- First row (Steps 1-4) -->
               <div class="process-row">
                 <!-- Step 1 -->
@@ -242,10 +265,10 @@
               </div>
               
               <!-- Vertical connector between row 1 and 2 -->
-              <div class="vertical-connector" style="margin-left: auto; margin-right: 75px;"></div>
+              <div class="vertical-connector" style="margin-left: auto; margin-right: 75px;margin-top:26px;"></div>
               
               <!-- Second row (Steps 8-5) -->
-              <div class="process-row">
+              <div class="process-row" style="margin-top: 30px;">
                 <!-- Step 8 -->
                 <div class="process-step">
                   <div class="step-circle">
@@ -446,7 +469,12 @@
     <!-- --------- members ----------- -->
 
     <section class="team-section">
+       <div> 
         <h2 class="title">Meet our team</h2>
+        <div class="team-text">
+          <p>With a shared vision of growth and innovation, we work together to provide Best Cap Compression Molding Machine, ensuring superior quality, and build lasting relationships with our clients worldwide. Get to know the minds behind Jobo India – the leaders shaping the future of the industry.</p>
+        </div>
+      </div>
         <div class="team-container">
             
             <div class="team-member">
@@ -479,7 +507,7 @@
     <!-- ----------------- factory -------------- -->
 
     <section class="factory-section container">
-        <h2 class="title">A GLIMPSE INTO OUR FACTORY</h2>
+        <h2 class="title">A Glimpse Into Our Factory</h2>
         <div class="factory-container">
             
             <div class="factory-item">
@@ -515,10 +543,10 @@
       <div class="contact-info">
           <div class="contact-item">
 
-              <div class="icon"><img src="/images/icons/address.png" alt="JOBO INDIA"></div>
+              <div class="icon"><img  style="height: 28px;" src="/images/icons/address.png" alt="JOBO INDIA"></div>
               <div>
                   <h4>Address</h4>
-                  <div>Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll Plaza, At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA</div>
+                  <div>Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll Plaza,<br> At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA</div>
               </div>
           </div>
           
@@ -555,7 +583,7 @@
           </div>
           
               <div class="navigation">
-                  <a href="#">Home</a>
+                  <a href="/index.html">Home</a>
                   <a href="/about.html">About Us</a>
                   <a href="#">Blog</a>
                   <a href="/videos.html">Video</a>
@@ -564,7 +592,7 @@
               
               <div class="products">
                      <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-                  <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+                  <a href="/product-three.html">24 Cavity Cap Compression Machine</a>
                   <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
                   <a href="/product.html">16 Cavity Compression Molding Machine</a>
               </div>
@@ -572,6 +600,68 @@
   </footer>
     
 
+  <script>
+    // Create the modal container element
+const modal = document.createElement('div');
+modal.classList.add('image-modal');
+document.body.appendChild(modal);
+
+// Create the modal content
+modal.innerHTML = `
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <img src="" alt="" class="modal-image">
+    <div class="modal-caption"></div>
+    <button class="modal-close">&times;</button>
+  </div>
+`;
+
+// Get modal elements
+const modalOverlay = modal.querySelector('.modal-overlay');
+const modalImage = modal.querySelector('.modal-image');
+const modalCaption = modal.querySelector('.modal-caption');
+const closeButton = modal.querySelector('.modal-close');
+
+// Get all factory items
+const factoryItems = document.querySelectorAll('.factory-item');
+
+// Add click event to each factory item
+factoryItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Get image source and caption
+    const imgSrc = this.querySelector('img').src;
+    const caption = this.querySelector('p').textContent;
+    
+    // Set modal content
+    modalImage.src = imgSrc;
+    modalImage.alt = caption;
+    modalCaption.textContent = caption;
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  });
+});
+
+// Close modal when clicking the close button
+closeButton.addEventListener('click', closeModal);
+
+// Close modal when clicking outside the image
+modalOverlay.addEventListener('click', closeModal);
+
+// Close modal function
+function closeModal() {
+  modal.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && modal.classList.contains('active')) {
+    closeModal();
+  }
+});
+  </script>
 <script src="script.js"></script>
 <!-- <script src="hideinspect.js"></script> -->
 <script src="hoverMenu.js"></script>

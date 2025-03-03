@@ -24,11 +24,24 @@ body {
     max-width: 1400px;
     padding: 20px;
 }
+
 .title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #000;
     margin-bottom: 35px;
+    position: relative;
+    text-transform: uppercase;
+    max-width:630px
+}
+.title::after{
+    content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 120px;
+            height: 6px;
+            background-color: #ff7834; 
 }
 /* Navigation Styles */
 .navbar {
@@ -309,11 +322,75 @@ body {
     text-decoration: none;
     font-size: 14px;
     transition: background 0.3s, color 0.3s;
+    position: relative;
 }
 
 .dropdown-menu a:hover {
     background: #f9f9f9;
     color: #FF4B26;
+}
+
+/* New styles for nested dropdown */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown > a::after {
+    content: '►';
+    font-size: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sub-dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.sub-dropdown:hover .sub-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Mobile adjustments for nested dropdown */
+@media screen and (max-width: 900px) {
+    .sub-dropdown-menu {
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .sub-dropdown:hover .sub-dropdown-menu,
+    .sub-dropdown.active .sub-dropdown-menu {
+        display: block;
+    }
+    
+    .sub-dropdown > a::after {
+        right: 0;
+    }
 }
 
 /* Hero Section Styles */
@@ -356,6 +433,38 @@ body {
     color: #FF4B26;
     line-height: 1.5;
 }
+/* Active state styling for navigation items */
+.nav-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-item:hover {
+    color: #ff6b00;
+  }
+  
+  .nav-item.active {
+    color: #ff6b00;
+    font-weight: bold;
+  }
+  
+  .nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b00;
+  }
+  
+  /* Make arrow buttons clickable */
+  .arrow {
+    cursor: pointer;
+  }
+
 
 /* ----------------- footer -------------  */
 
@@ -376,7 +485,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    max-width: 1200px;
+    max-width: 970px;
     margin: 0 auto;
 }
 .left-section{
@@ -392,7 +501,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
@@ -590,7 +699,18 @@ body {
 
 
 /* ------------- about section  ------------------ */
+
 .about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 0px;
+    margin-top: 50px;
+}
+.about-sectionOne{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -605,18 +725,19 @@ body {
 }
 
 .about-title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #000;
     margin-bottom: 15px;
 }
 
 .about-text {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
-    text-align: justify;
-    font-weight: 600;
+    font-weight: 500;
+    color: #555;
+    max-width: 600px;
 }
 
 .about-video {
@@ -653,8 +774,95 @@ body {
 
 .play-button img {
     height: 32px;
-    color: #A03211;
+    color: #ff7834;
 }
+
+/* Active state styling for navigation items */
+.nav-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-item:hover {
+    color: #ff6b00;
+  }
+  
+  .nav-item.active {
+    color: #ff6b00;
+    font-weight: bold;
+  }
+  
+  .nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b00;
+  }
+  
+  /* Make arrow buttons clickable */
+  .arrow {
+    cursor: pointer;
+  }
+  
+  /* Animation styles */
+  .about-section {
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .slide-out {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Video container styles */
+  .about-video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
 
 
@@ -946,5 +1154,8 @@ body {
     }
     .slide {
         min-width: 100%;
+    }
+    .about-section{
+        flex-wrap: wrap;
     }
 }

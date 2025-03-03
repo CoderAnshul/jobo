@@ -5,6 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Compression Molding</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      @media screen and (max-width: 768px) {
+        .dropdown{
+          text-align: center;
+        }
+      }
+      .slider-container {
+    width: 100%;
+    max-width: 600px; /* Adjust this based on your desired carousel width */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.slides-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 800%; /* 100% × number of slides (8 slides total) */
+}
+
+.slide {
+    width: 12.5%; /* 100% ÷ number of slides (8 slides total) */
+    flex: 0 0 12.5%;
+    min-height: 400px;
+    position: relative;
+    background: transparent;
+    transition: transform 0.3s;
+}
+
+.slide:hover {
+    transform: translateY(5px);
+}
+
+.slide img {
+    width: 100%;
+    height: 320px; /* Fixed height */
+    object-fit: contain;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.slide-content {
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.slide-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #f07e26; /* Orange color to match your design */
+}
+        
+        .orange-separator {
+            height: 3px;
+            width: 60px;
+            background-color: #e67e22;
+            margin: 20px 0;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .navigation-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background-color: #eee;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #ddd;
+        }
+        
+        .indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 8px;
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .indicator.active {
+            background-color: #e67e22;
+        }
+        
+        /* Make responsive */
+        @media (max-width: 768px) {
+            .slider-container {
+                flex-direction: column;
+            }
+            
+            .left-content, .slides-wrapper {
+                width: 100%;
+            }
+            
+            .left-content {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -15,15 +172,29 @@
         </a>
         <div class="navbar-content">
             <div class="nav-links">
-                <a href="#" class="active">Home</a>
+                <a href="/index.html" class="active">Home</a>
                 <a href="/about.html">About Us</a>
                 <div class="dropdown">
                     <a href="#">Products</a>
                     <div class="dropdown-menu">
-                        <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-                    <a href="/product-three.html">36 Cavity Cap Making Machine</a>
-                    <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
-                    <a href="/product.html">16 Cavity Compression Molding Machine</a>
+                        <div class="sub-dropdown">
+                            <a href="/working.html">Cap Compression Moulding Machine</a>
+                            <div class="sub-dropdown-menu">
+                                <a href="/product.html">16 Cavity Compression Molding Machine</a>
+                                <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
+                                <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+                                <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+                            </div>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a href="#">Auxiliaries</a>
+                            <div class="sub-dropdown-menu">
+                                <a href="/auxiliaries-1.html">Cap Folding Machine</a>
+                                <a href="/auxiliaries-2.html">Cap Cooler Machine</a>
+                                <a href="/auxiliaries-3.html">Cap Slitting Machine</a>
+                                <a href="/auxiliaries-4.html">Cap Lining Machine</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="#">Blog</a>
@@ -41,7 +212,6 @@
                 <img src="./images/icons/search.png" alt="search">
             </div>
         </div>
-        
         <div class="mobile-menu-btn">
             <span></span>
             <span></span>
@@ -54,6 +224,7 @@
             <div class="hero-content">
                 <h1>Leading the Way in Cap Compression Molding</h1>
                 <p>Maximize productivity and minimize cost with our advanced solutions.</p>
+                <p style="margin-top: 50px;">Cap Compression Machine</p>
             </div>
             
         </header>
@@ -109,6 +280,14 @@
             <p class="about-text">
                 Beyond technology, Jobo India provides end-to-end support, including machine setup, technical assistance, and spare parts.
             </p>
+            <a href="/about.html" class="contact-button">
+                <div class="contact-button-inner">
+                    <span class="contact-text">Read more</span>
+                    <div class="arrow-circle">
+                        <i class="arrowbtn"></i>
+                    </div>
+                </div>
+            </a>
         </div>
         <div class="about-video">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YbJdonwyXUM?si=PECOtCnrYdE19nOH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -135,19 +314,101 @@
     <!-- ------------------- machine section ----------------- -->
 
     <div class="machine-section">
-        <div class="machine-content">
-            <h1 class="title">Next-Generation Cap Compression Molding Machines</h1>
-            <p>Efficient, reliable and cost-effective solutions for cap manufacturing.</p>
-        </div>
-        <div class="machine-img">
-            <img src="/./images/product/home_prod.png" alt="16 CAVITY CAP COMPRESSION MOLDING MACHINE">
-            <h4 class="machine-title">16 CAVITY CAP COMPRESSION MOLDING MACHINE</h4>
+        <div class="machine-main-wrap container">
+            <div class="machine-content">
+                <h1 class="title">Next-Generation Cap Compression Molding Machines</h1>
+                <p>Efficient, reliable and cost-effective solutions for cap manufacturing.</p>
+                <div class="certificate-wrapper">
+                    <div class="certification-logos">
+                        <img src="./images/certificate/certi1.webp" alt="TUV SUD Certification" class="tuv-logo">
+                    </div>
+                    <div class="certification-logos">
+                        <img src="./images/certificate/certi2.jpg" alt="CE Certification" class="ce-logo">
+                    </div>
+                    <div class="certification-logos">
+                        <img src="./images/certificate/certi3.jpg" alt="Bureau Veritas Certification" class="veritas-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container">
+                
+                <!-- Slides wrapper -->
+                <div class="slides-wrapper" id="slidesWrapper">
+                    <div class="slides-track" id="slidesTrack">
+                        <!-- Original slides -->
+                        <div class="slide" data-index="0">
+                            <img src="./images/product/prodone.png" alt="16 Cavity Compression Molding Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">16 Cavity Compression Molding Machine</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="1">
+                            <img src="./images/product/prodtwo.png" alt="24 Cavity Cap Compression Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">24 Cavity Cap Compression Machine</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="2">
+                            <img src="./images/product/prodThree.png" alt="24 Cavity Cap Compression Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="3">
+                            <img src="./images/product/prodfour.png" alt="16 Cavity Compression Molding Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">36 Cavity High Speed Cap Machine</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Duplicate slides for the infinite loop effect -->
+                        <div class="slide" data-index="4">
+                            <img src="./images/product/prodone.png" alt="16 Cavity Compression Molding Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">16 Cavity Compression Molding Machine</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="5">
+                            <img src="./images/product/prodtwo.png" alt="24 Cavity Cap Compression Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">24 Cavity Cap Compression Machine</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="6">
+                            <img src="./images/product/prodThree.png" alt="24 Cavity Cap Compression Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slide" data-index="7">
+                            <img src="./images/product/prodfour.png" alt="16 Cavity Compression Molding Machine">
+                            <div class="slide-content">
+                                <div class="slide-title">36 Cavity High Speed Cap Machine</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Indicators - removed the fifth indicator -->
+                    <div class="indicators" id="indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                        <span class="indicator" data-index="3"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- ---------------- certified section -------------- -->
 
-    <div class="certified-section container">
+    <!-- <div class="certified-section container">
         <h2 class="title">Certified Excellence</h2>
         <div class="certificate-wrapper">
             <div class="certification-logos">
@@ -160,7 +421,7 @@
                 <img src="./images/certificate/certi3.jpg" alt="Bureau Veritas Certification" class="veritas-logo">
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- ---------------------- testimonial section --------------------- -->
@@ -170,28 +431,27 @@
         <div class="testi-wrapper">
             <div class="testimonial-section">
                 <div class="testimonial-slider">
-                    <span class="arrow" onclick="moveSlide(-1)">&#8249;</span>
+                    
                     <div class="testimonial-wrapper">
                         <div class="testimonials" id="testimonialSlides">
                             <div class="testimonial-content">
-                                <p class="testimonial-text">We have bought two sets compression machine from Jobo machinery since 2015, but we have not visited to their factory yet even Mr. Leo invited ......</p>
+                                <p class="testimonial-text">We have bought two sets compression machine from Jobo machinery since 2015, but we have not visited to their factory yet even Mr. Leo invited us a lot of times. Its far away from here and it may sound strange but only because of the trust. The guy who come to my factory for installation was nice guy, we taught him Espanol</p>
                                 <p class="client-name">— Argentina Client</p>
                             </div>
                             <div class="testimonial-content">
-                                <p class="testimonial-text">The quality of the compression molding machine exceeded our expectations. The technical support team has been very responsive...</p>
-                                <p class="client-name">— Brazil Customer</p>
+                                <p class="testimonial-text">Our machine supplier (you) has been an excellent partner in providing timely support from start to machine delivery and beyond. Post delivery support is most important when considering any supplier, especially from China, and Jobo have provide quick and efficient support round the clock for all our need.</p>
+                                <p class="client-name">— Vietnam client</p>
                             </div>
                             <div class="testimonial-content">
-                                <p class="testimonial-text">After implementing the Jobo machinery solutions, our production efficiency increased by 40%. Their after-sales service is exceptional...</p>
-                                <p class="client-name">— Mexico Industrial</p>
-                            </div>
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">The installation process was smooth, and the training provided was comprehensive. We're looking forward to our next purchase...</p>
-                                <p class="client-name">— Colombia Factory</p>
+                                <p class="testimonial-text">I compared a lot of supplier but finally chose Jobo, because machine looks good, price is ok (of course I think it can be cheaper) and the salesman very reliable. The machine quality is good, beyond my expectation. The after service also very fast. But I will not recommend the machine to my competitor because its good."</p>
+                                <p class="client-name">— India client</p>
                             </div>
                         </div>
-                    </div>
-                    <span class="arrow" onclick="moveSlide(1)">&#8250;</span>
+                        <div style="display:flex; background-color: white;  border-radius: 50%; height: 60px; width: 60px; padding-bottom: 5px; min-height: 65px; min-width: 70px;  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);justify-content: center;  align-items: center;  gap:10px; position:absolute; bottom:10px; right:10px; z-index: 20;">
+                            <span class="arrow" onclick="moveSlide(-1)">&#8249;</span>
+                        <span class="arrow" onclick="moveSlide(1)">&#8250;</span>
+                        </div>
+                        </div>
                 </div>
             </div>
             <div class="project-section">
@@ -217,7 +477,7 @@
                 <div class="icon"><img src="/images/icons/address.png" alt="JOBO INDIA"></div>
                 <div>
                     <h4>Address</h4>
-                    <div>Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll Plaza, At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA</div>
+                    <div>Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll Plaza,<br> At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA</div>
                 </div>
             </div>
             
@@ -254,7 +514,7 @@
             </div>
             
                 <div class="navigation">
-                    <a href="#">Home</a>
+                    <a href="/index.html">Home</a>
                     <a href="/about.html">About Us</a>
                     <a href="#">Blog</a>
                     <a href="/videos.html">Video</a>
@@ -263,7 +523,7 @@
                 
                 <div class="products">
                        <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-                    <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+                    <a href="/product-three.html">24 Cavity Cap Compression Machine</a>
                     <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
                     <a href="/product.html">16 Cavity Compression Molding Machine</a>
                 </div>
@@ -275,10 +535,158 @@
     
 
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('slidesTrack');
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const originalSlideCount = 4; // Number of unique slides (not counting duplicates)
+    let currentIndex = 0;
+    let autoSlideInterval;
+    let isTransitioning = false;
+    
+    // Function to move to a specific slide
+    function moveToSlide(index, immediate = false) {
+        if (isTransitioning && !immediate) return;
+        
+        isTransitioning = true;
+        
+        // Calculate percentage for translateX based on slide index
+        const translateValue = index * (100 / slides.length);
+        
+        // Update indicators (only for original slides, not duplicates)
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === (index % originalSlideCount));
+        });
+        
+        // Apply transform with or without transition
+        if (immediate) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s ease-in-out';
+        }
+        
+        track.style.transform = `translateX(-${translateValue}%)`;
+        currentIndex = index;
+        
+        // Reset transition after immediate changes
+        if (immediate) {
+            setTimeout(() => {
+                track.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        }
+        
+        // Allow new transitions after animation completes
+        setTimeout(() => {
+            isTransitioning = false;
+            
+            // Handle the infinite loop effect
+            if (currentIndex >= originalSlideCount * 2 - 1) {
+                // If we reached the end of duplicates, jump back to original slides without animation
+                moveToSlide(currentIndex % originalSlideCount, true);
+            } else if (currentIndex < 0) {
+                // If we went beyond the start, jump to the end without animation
+                moveToSlide(originalSlideCount + (currentIndex % originalSlideCount), true);
+            }
+        }, 500);
+    }
+    
+    // Auto slide function
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            moveToSlide(currentIndex + 1);
+        }, 3000); // 3-second pause
+    }
+    
+    // Initialize auto slide
+    startAutoSlide();
+    
+    // Add navigation buttons (if they don't exist in your HTML)
+    const slidesWrapper = document.getElementById('slidesWrapper');
+    
+    if (!document.getElementById('prevBtn')) {
+        const prevBtn = document.createElement('button');
+        prevBtn.id = 'prevBtn';
+        prevBtn.className = 'nav-btn prev-btn';
+        prevBtn.innerHTML = '&lt;';
+        slidesWrapper.appendChild(prevBtn);
+        
+        prevBtn.addEventListener('click', () => {
+            moveToSlide(currentIndex - 1);
+            startAutoSlide(); // Reset timer on manual navigation
+        });
+    }
+    
+    if (!document.getElementById('nextBtn')) {
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'nextBtn';
+        nextBtn.className = 'nav-btn next-btn';
+        nextBtn.innerHTML = '&gt;';
+        slidesWrapper.appendChild(nextBtn);
+        
+        nextBtn.addEventListener('click', () => {
+            moveToSlide(currentIndex + 1);
+            startAutoSlide(); // Reset timer on manual navigation
+        });
+    }
+    
+    // Style the buttons
+    const style = document.createElement('style');
+    style.textContent = `
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Indicator click events
+    indicators.forEach((indicator) => {
+        indicator.addEventListener('click', () => {
+            const index = parseInt(indicator.dataset.index);
+            moveToSlide(index);
+            startAutoSlide(); // Reset timer on manual navigation
+        });
+    });
+    
+    // Pause on hover
+    track.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+    
+    track.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
+    
+    // Handle transition end to create the infinite loop effect
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+    });
+});
+    </script>
     <script src="script.js"></script>
     <script src="hoverMenu.js"></script>
-    <script src="hideinspect.js"></script>
+    <!-- <script src="hideinspect.js"></script> -->
     
 </body>
 </html>
