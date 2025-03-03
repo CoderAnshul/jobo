@@ -466,6 +466,14 @@ body {
     cursor: pointer;
   }
 
+  .content-text {
+    display: flex;
+    gap: 40px;
+  }
+  .content-text img {
+   height: 60px;
+  }
+
 
   .working-photo{
     height: 300px;
