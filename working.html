@@ -8,168 +8,189 @@
     <link rel="stylesheet" href="./styles/video.css" />
     <style>
       .design-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f5f5f5;
-      padding: 20px;
-    }
-    
-    .design-main-container {
-      display: flex;
-      width: 100%;
-      max-width: 1200px;
-      height: 450px;
-      gap: 15px;
-    }
-    
-    .design-slider-wrapper {
-      flex: 3;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .design-slider-track {
-      display: flex;
-      transition: transform 0.5s ease;
-      height: 100%;
-    }
-    
-    .design-slide-item {
-      min-width: calc(50% - 7.5px);
-      height: 100%;
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .design-slide-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .design-info-box {
-      flex: 1;
-      background-color: #3a2e27;
-      border-radius: 15px;
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    
-    .design-project-tag {
-      font-size: 14px;
-      opacity: 0.8;
-      display: flex;
-      align-items: center;
-    }
-    
-    .design-project-tag::before {
-      content: '';
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: white;
-      opacity: 0.8;
-      margin-right: 8px;
-      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    }
-    
-    .design-info-box h1 {
-      font-size: 48px;
-      font-weight: 600;
-      line-height: 1.1;
-    }
-    
-    .design-cta-group {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-    }
-    
-    .design-cta-button {
-      background-color: white;
-      color: #333;
-      border: none;
-      border-radius: 50px;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-    
-    .design-arrow-circle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      background-color: #d0aa78;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    
-    .design-arrow-circle svg {
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
-    
-    .design-bg-pattern {
-      position: absolute;
-      bottom: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      opacity: 0.3;
-      z-index: 0;
-    }
-    
-    .design-content-wrap {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    
-    .design-nav-controls {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      gap: 10px;
-    }
-    
-    .design-nav-button {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.3);
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    
-    .design-nav-button svg {
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .design-main-container {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        height: 450px;
+        gap: 15px;
+      }
+
+      .design-slider-wrapper {
+        flex: 3;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .design-slider-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        gap: 20px;
+      }
+
+      .design-slide-item {
+        min-width: calc(49% - 7.5px);
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+
+      .design-slide-item img {
+        /* width: 100%; */
+        height: 30%;
+        object-fit: cover;
+      }
+
+      .design-slide-item h2 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .design-info-box {
+        flex: 1;
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        color: #ff7834;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .design-project-tag {
+        font-size: 14px;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+      }
+
+      .design-project-tag::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ff7834;
+        opacity: 0.8;
+        margin-right: 8px;
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+      }
+
+      .design-info-box h1 {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.1;
+      }
+
+      .design-cta-group {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .design-cta-button {
+        background-color: #ff7834;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .design-arrow-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: #ff7834;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .design-arrow-circle svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+
+      .design-bg-pattern {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        opacity: 0.3;
+        z-index: 0;
+      }
+
+      .design-content-wrap {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .design-nav-controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .design-nav-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ff7834b4;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .design-nav-button svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
       @media screen and (max-width: 768px) {
         .dropdown {
           text-align: center;
+        }
+        .design-main-container {
+          flex-direction: column;
+          gap: 20px;
+          height: fit-content;
+        }
+        .design-slide-item {
+          min-width: 100%;
+          height: 300px;
         }
       }
     </style>
@@ -748,31 +769,56 @@
           <div class="design-slider-track">
             <div class="design-slide-item">
               <img
-            src="./images/slide1.png"
-            alt="16 Cavity Compression Molding Machine"
-          />
+                src="./images/slide1.png"
+                alt="16 Cavity Compression Molding Machine"
+              />
+
+              <h2 class="name">16 Cavity Compression Molding Machine</h2>
+              <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
             <div class="design-slide-item">
-              <img src="/api/placeholder/400/450" alt="Luxury bathroom with freestanding tub">
+              <img
+                src="./images/product/prodtwo.png"
+                alt="Minimalist living room with white furniture"
+              />
+              <h2>
+                24 Cavity Cap Compression <br />
+                Machine
+              </h2>
+              <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
             <div class="design-slide-item">
-              <img src="/api/placeholder/400/450" alt="Minimalist living room with white furniture">
+              <img
+                src="./images/product/prodtwo.png"
+                alt="Luxury bathroom with freestanding tub"
+              />
+              <h2>36 CAVITY CAP MAKING MACHINE</h2>
+              <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
+            </div>
+
+            <div class="design-slide-item">
+              <img
+                src="./images/product/prodThree.png"
+                alt="Minimalist living room with white furniture"
+              />
+              <h2>36 Cavity High Speed Cap Machine</h2>
+              <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
           </div>
           <div class="design-nav-controls">
             <button class="design-nav-button design-prev-btn">
               <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
               </svg>
             </button>
             <button class="design-nav-button design-next-btn">
               <svg viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
               </svg>
             </button>
           </div>
         </div>
-        
+
         <div class="design-info-box">
           <div class="design-content-wrap">
             <div>
@@ -783,21 +829,26 @@
               <button class="design-cta-button">Read More</button>
               <div class="design-arrow-circle">
                 <svg viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                 </svg>
               </div>
             </div>
           </div>
           <svg class="design-bg-pattern" viewBox="0 0 100 100">
-            <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="white" stroke-width="0.5"></path>
-            <path d="M20,0 L20,100" stroke="white" stroke-width="0.5"></path>
-            <path d="M40,0 L40,100" stroke="white" stroke-width="0.5"></path>
-            <path d="M60,0 L60,100" stroke="white" stroke-width="0.5"></path>
-            <path d="M80,0 L80,100" stroke="white" stroke-width="0.5"></path>
-            <path d="M0,20 L100,20" stroke="white" stroke-width="0.5"></path>
-            <path d="M0,40 L100,40" stroke="white" stroke-width="0.5"></path>
-            <path d="M0,60 L100,60" stroke="white" stroke-width="0.5"></path>
-            <path d="M0,80 L100,80" stroke="white" stroke-width="0.5"></path>
+            <path
+              d="M0,0 L100,0 L100,100 L0,100 Z"
+              fill="none"
+              stroke="#ff7834"
+              stroke-width="0.5"
+            ></path>
+            <path d="M20,0 L20,100" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M40,0 L40,100" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M60,0 L60,100" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M80,0 L80,100" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M0,20 L100,20" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M0,40 L100,40" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M0,60 L100,60" stroke="#ff7834" stroke-width="0.5"></path>
+            <path d="M0,80 L100,80" stroke="#ff7834" stroke-width="0.5"></path>
           </svg>
         </div>
       </div>
@@ -892,47 +943,46 @@
       </div>
     </footer>
 
-
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const slider = document.querySelector('.design-slider-track');
-        const slides = document.querySelectorAll('.design-slide-item');
-        const prevBtn = document.querySelector('.design-prev-btn');
-        const nextBtn = document.querySelector('.design-next-btn');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".design-slider-track");
+        const slides = document.querySelectorAll(".design-slide-item");
+        const prevBtn = document.querySelector(".design-prev-btn");
+        const nextBtn = document.querySelector(".design-next-btn");
+
         const slideWidth = 50; // Each slide takes 50% of the container width
         let currentIndex = 0;
         const totalSlides = slides.length;
         const visibleSlides = 2;
         const maxIndex = totalSlides - visibleSlides;
-        
+
         // Set initial position to show the first 2 slides
         updateSliderPosition();
-        
-        prevBtn.addEventListener('click', () => {
+
+        prevBtn.addEventListener("click", () => {
           if (currentIndex > 0) {
             currentIndex--;
             updateSliderPosition();
           }
         });
-        
-        nextBtn.addEventListener('click', () => {
+
+        nextBtn.addEventListener("click", () => {
           if (currentIndex < maxIndex) {
             currentIndex++;
             updateSliderPosition();
           }
         });
-        
+
         function updateSliderPosition() {
           const offsetPercentage = -currentIndex * slideWidth;
           slider.style.transform = `translateX(${offsetPercentage}%)`;
-          
+
           // Update button states
           prevBtn.disabled = currentIndex === 0;
           nextBtn.disabled = currentIndex === maxIndex;
-          
-          prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
-          nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+
+          prevBtn.style.opacity = prevBtn.disabled ? "0.5" : "1";
+          nextBtn.style.opacity = nextBtn.disabled ? "0.5" : "1";
         }
       });
     </script>
