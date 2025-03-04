@@ -15,7 +15,7 @@
         width: 100%;
         max-width: 600px; /* Adjust this based on your desired carousel width */
         margin: 0 auto;
-        overflow: hidden;
+        /* overflow: hidden; */
         position: relative;
       }
 
@@ -748,7 +748,7 @@
         startAutoSlide();
 
         // Add navigation buttons (if they don't exist in your HTML)
-        const slidesWrapper = document.getElementById("slidesWrapper");
+        const slidesWrapper = document.querySelector(".slider-container");
 
         if (!document.getElementById("prevBtn")) {
           const prevBtn = document.createElement("button");
@@ -797,10 +797,10 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .prev-btn {
-            left: 10px;
+            left: -40px;
         }
         .next-btn {
-            right: 10px;
+            right: -40px;
         }
     `;
         document.head.appendChild(style);
