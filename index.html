@@ -6,6 +6,35 @@
     <title>Cap Compression Molding</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+        .cta-button {
+      display: flex;
+      align-items: center;
+      color: #ff7834;
+      padding: 16px 24px;
+      border-radius: 4px;
+      width:fit-content;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .arrow {
+      /* margin-left: 12px; */
+      font-size: 28px;
+      color:#ff7834;
+      transition: transform 0.3s ease;
+    }
+    
+    .cta-button:hover .arrow {
+      transform: translateX(5px);
+    }
+
       @media screen and (max-width: 768px) {
         .dropdown {
           text-align: center;
@@ -162,6 +191,109 @@
           margin-bottom: 30px;
         }
       }
+
+      .machine-image {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.machine-image img {
+  position: absolute;
+}
+
+.machine-image img:nth-child(1) { /* punch.png */
+  top: 0;
+  right: 26%;
+  z-index: 100;
+  max-height: 350px;
+  animation: slideFromTop 1.2s ease-out;
+}
+
+.machine-image img:nth-child(2) { /* CAP.png */
+  top: 43%;
+  right: 18%; 
+  z-index: 100;
+  max-height: 150px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.machine-image img:nth-child(3) { /* cavity.png */
+  bottom: 0;
+  right: 0%;
+  z-index: 100;
+  max-height: 330px;
+  animation: slideFromBottom 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media(min-width:1600px) {
+    .machine-image img:nth-child(1) { /* punch.png */
+  top: 0;
+  right: 28%;
+  z-index: 100;
+  max-height: 42vh;
+  animation: slideFromTop 1.2s ease-out;
+}
+
+.machine-image img:nth-child(2) { /* CAP.png */
+  top: 40%;
+  right: 20%; 
+  z-index: 100;
+  max-height: 170px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.machine-image img:nth-child(3) { /* cavity.png */
+  bottom: 0;
+  right: 0%;
+  z-index: 100;
+  max-height: 45vh;
+  animation: slideFromBottom 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+}
+@media(max-width:500px) {
+    .machine-image {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+}
     </style>
   </head>
   <body>
@@ -188,9 +320,7 @@
                     >24 Cavity Cap Compression Machine</a
                   >
                   <a href="/product-three.html">36 Cavity Cap Making Machine</a>
-                  <a href="/product-four.html"
-                    >36 Cavity High Speed Cap Machine</a
-                  >
+                  <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
                 </div>
               </div>
               <div class="sub-dropdown">
@@ -235,11 +365,15 @@
           <p>
             Maximize productivity and minimize cost with our advanced solutions.
           </p>
-          <p style="margin-top: 50px">Cap Compression Machine</p>
+          <a href="/working.html" class="cta-button">
+            Cap Compression Machine <span class="arrow">→</span>
+          </a>
         </div>
       </header>
       <div class="machine-image">
-        <img src="./images/banner/homeBannerTwo.png" alt="Machinery" />
+        <img src="./images/banner/punch.png" alt="Machinery" />
+        <img src="./images/banner/CAP.png" alt="Machinery" />
+        <img src="./images/banner/cavity.png" alt="Machinery" />
       </div>
     </div>
 
@@ -400,17 +534,18 @@
 
                 <div class="slide" data-index="2">
                   <img
-                    src="./images/product/prodThree.png"
+                    src="./images/product/capMaking.jpg"
                     alt="24 Cavity Cap Compression Machine"
                   />
                   <div class="slide-content">
-                    <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>
+                    <div class="slide-title">36 Cavity Cap Making
+                        Machine</div>
                   </div>
                 </div>
 
                 <div class="slide" data-index="3">
                   <img
-                    src="./images/product/prodfour.png"
+                    src="./images/product/prodThree.png"
                     alt="16 Cavity Compression Molding Machine"
                   />
                   <div class="slide-content">
