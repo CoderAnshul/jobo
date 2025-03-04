@@ -535,6 +535,7 @@ a {
 }
 
 .contact-button {
+    margin-top: 26px;
   display: inline-block;
   /* background: linear-gradient(to bottom, #ffb347, #ff8c00); */
   background-color: #ff7834;
