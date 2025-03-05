@@ -657,7 +657,9 @@ body {
 
 .tab-content.active {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 
 .tab-content h2 {
@@ -681,6 +683,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: red; */
+  width: 1300px;
 }
 
 .content-text p {
@@ -689,6 +693,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   max-width: 500px;
+  margin-left: 138px;
 }
 
 .content-image {
@@ -700,6 +705,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 25px;
+  margin-right: 40px;
 }
 
 .content-image img {
@@ -1117,7 +1123,6 @@ body {
     position: absolute;
     top: 0px;
     right: -50px;
-   
   }
 }
 
@@ -1173,8 +1178,8 @@ body {
 
 /* Placeholder Image */
 .team-image img {
-  width: 50px;
-  height: 50px;
+  width: 110px;
+  height: 110px;
 }
 
 /* Name Styling */

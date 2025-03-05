@@ -6,34 +6,51 @@
     <title>Cap Compression Molding</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-        .cta-button {
-      display: flex;
-      align-items: center;
-      color: #ff7834;
-      padding: 16px 24px;
-      border-radius: 4px;
-      width:fit-content;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      transition: all 0.3s ease;
-    }
-    
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    .arrow {
-      /* margin-left: 12px; */
-      font-size: 28px;
-      color:#ff7834;
-      transition: transform 0.3s ease;
-    }
-    
-    .cta-button:hover .arrow {
-      transform: translateX(5px);
-    }
+      .cta-button {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #ff7834;
+        color: white;
+        padding: 10px 10px 10px 20px;
+        border-radius: 4px;
+        width: fit-content;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .button-arrow {
+        /* margin-left: 12px; */
+        font-size: 34px;
+        padding-bottom: 2px;
+        height: 35px;
+        width: 35px;
+        border-radius: 4px;
+        background-color: white;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ff7834;
+        transition: transform 0.3s ease;
+      }
+      .arrow {
+        /* margin-left: 12px; */
+        font-size: 28px;
+        color: #ff7834;
+        transition: transform 0.3s ease;
+      }
+
+      .cta-button:hover .arrow {
+        transform: translateX(5px);
+      }
 
       @media screen and (max-width: 768px) {
         .dropdown {
@@ -150,6 +167,7 @@
         align-items: center;
         justify-content: center;
         transition: background-color 0.3s;
+        color: #ff7834;
       }
 
       .nav-btn:hover {
@@ -193,115 +211,121 @@
       }
 
       .machine-image {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-}
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+      }
 
-.machine-image img {
-  position: absolute;
-}
+      .machine-image img {
+        position: absolute;
+      }
 
-.machine-image img:nth-child(1) { /* punch.png */
-  top: 0;
-  right: 26%;
-  z-index: 100;
-  max-height: 350px;
-  animation: slideFromTop 1.2s ease-out;
-}
+      .machine-image img:nth-child(1) {
+        /* punch.png */
+        top: 0;
+        right: 26%;
+        z-index: 100;
+        max-height: 350px;
+        animation: slideFromTop 1.2s ease-out;
+      }
 
-.machine-image img:nth-child(2) { /* CAP.png */
-  top: 43%;
-  right: 18%; 
-  z-index: 100;
-  max-height: 150px;
-  animation: fadeIn 1.5s ease-in;
-}
+      .machine-image img:nth-child(2) {
+        /* CAP.png */
+        top: 43%;
+        right: 18%;
+        z-index: 100;
+        max-height: 150px;
+        animation: fadeIn 1.5s ease-in;
+      }
 
-.machine-image img:nth-child(3) { /* cavity.png */
-  bottom: 0;
-  right: 0%;
-  z-index: 100;
-  max-height: 330px;
-  animation: slideFromBottom 1s ease-out 0.3s;
-  animation-fill-mode: both;
-}
+      .machine-image img:nth-child(3) {
+        /* cavity.png */
+        bottom: 0;
+        right: 0%;
+        z-index: 100;
+        max-height: 330px;
+        animation: slideFromBottom 1s ease-out 0.3s;
+        animation-fill-mode: both;
+      }
 
-@keyframes slideFromTop {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+      @keyframes slideFromTop {
+        0% {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
 
-@keyframes slideFromBottom {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+      @keyframes slideFromBottom {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-@media(min-width:1600px) {
-    .machine-image img:nth-child(1) { /* punch.png */
-  top: 0;
-  right: 28%;
-  z-index: 100;
-  max-height: 42vh;
-  animation: slideFromTop 1.2s ease-out;
-}
-.history-section{
-    margin-left: 3.5%;
-}
+      @media (min-width: 1600px) {
+        .machine-image img:nth-child(1) {
+          /* punch.png */
+          top: 0;
+          right: 28%;
+          z-index: 100;
+          max-height: 42vh;
+          animation: slideFromTop 1.2s ease-out;
+        }
+        .history-section {
+          margin-left: 3.5%;
+        }
 
-.machine-image img:nth-child(2) { /* CAP.png */
-  top: 40%;
-  right: 20%; 
-  z-index: 100;
-  max-height: 170px;
-  animation: fadeIn 1.5s ease-in;
-}
+        .machine-image img:nth-child(2) {
+          /* CAP.png */
+          top: 40%;
+          right: 20%;
+          z-index: 100;
+          max-height: 170px;
+          animation: fadeIn 1.5s ease-in;
+        }
 
-.machine-image img:nth-child(3) { /* cavity.png */
-  bottom: 0;
-  right: 0%;
-  z-index: 100;
-  max-height: 45vh;
-  animation: slideFromBottom 1s ease-out 0.3s;
-  animation-fill-mode: both;
-}
-}
-@media(max-width:500px) {
-    .machine-image {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  display: none;
-}
-}
-@media(max-width:1100px) {
-    .history-section{
-    padding-left: 2%!important;
-}
-}
+        .machine-image img:nth-child(3) {
+          /* cavity.png */
+          bottom: 0;
+          right: 0%;
+          z-index: 100;
+          max-height: 45vh;
+          animation: slideFromBottom 1s ease-out 0.3s;
+          animation-fill-mode: both;
+        }
+      }
+      @media (max-width: 500px) {
+        .machine-image {
+          position: absolute;
+          width: 100%;
+          overflow: hidden;
+          display: none;
+        }
+      }
+      @media (max-width: 1100px) {
+        .history-section {
+          padding-left: 2% !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -328,7 +352,9 @@
                     >24 Cavity Cap Compression Machine</a
                   >
                   <a href="/product-three.html">36 Cavity Cap Making Machine</a>
-                  <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+                  <a href="/product-four.html"
+                    >36 Cavity High Speed Cap Machine</a
+                  >
                 </div>
               </div>
               <div class="sub-dropdown">
@@ -374,7 +400,7 @@
             Maximize productivity and minimize cost with our advanced solutions.
           </p>
           <a href="/working.html" class="cta-button">
-            Cap Compression Machine <span class="arrow">→</span>
+            Cap Compression Machine <span class="button-arrow">&#8250;</span>
           </a>
         </div>
       </header>
@@ -465,7 +491,7 @@
 
     <!-- ------------------- history section ----------------- -->
 
-    <section class="history-section " style="padding-left:7%;">
+    <section class="history-section" style="padding-left: 7%">
       <div class="history-content" style="overflow: auto">
         <h2 class="title">Our Journey of Innovation</h2>
         <div class="history-wrapper">
@@ -546,8 +572,7 @@
                     alt="24 Cavity Cap Compression Machine"
                   />
                   <div class="slide-content">
-                    <div class="slide-title">36 Cavity Cap Making
-                        Machine</div>
+                    <div class="slide-title">36 Cavity Cap Making Machine</div>
                   </div>
                 </div>
 
@@ -897,7 +922,7 @@
           const prevBtn = document.createElement("button");
           prevBtn.id = "prevBtn";
           prevBtn.className = "nav-btn prev-btn";
-          prevBtn.innerHTML = "&lt;";
+          prevBtn.innerHTML = "&#8249;";
           slidesWrapper.appendChild(prevBtn);
 
           prevBtn.addEventListener("click", () => {
@@ -910,7 +935,7 @@
           const nextBtn = document.createElement("button");
           nextBtn.id = "nextBtn";
           nextBtn.className = "nav-btn next-btn";
-          nextBtn.innerHTML = "&gt;";
+          nextBtn.innerHTML = "&#8250;";
           slidesWrapper.appendChild(nextBtn);
 
           nextBtn.addEventListener("click", () => {
@@ -924,31 +949,37 @@
         style.textContent = `
         .nav-btn {
             position: absolute;
-            top: 50%;
+            top: 94%;
             transform: translateY(-50%);
             background-color: rgba(255, 255, 255, 0.7);
             border: none;
-            width: 22px;
-            height: 40px;
+            width: 30px;
+            height: 50px;
             font-size: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 10;
-            // background: #f07e26;
+            font-size: 28px;
+            padding-bottom: 2px;
+            //  background: #f07e26;
         }
         .prev-btn {
-             border-radius: 20px 0px 0px 20px;
-            right: -20px;
+             border-radius: 30px 0px 0px 30px;
+            right: 60px;
              box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.1);
+                         color : "#ff7834";
+
 
         }
         .next-btn {
                      box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
 
-         border-radius: 00px 20px 20px 0px;
-            right: -40px;
+         border-radius: 00px 30px 30px 0px;
+            right: 35px;
+                        color : "#ff7834";
+
         }
     `;
         document.head.appendChild(style);
