@@ -649,12 +649,12 @@ a {
 
 .spec-box {
   /* position: absolute; */
-  background-color: rgba(241, 240, 240, 0.305);
-  padding: 15px 20px;
+  /* background-color: rgba(241, 240, 240, 0.305); */
+  padding: 15px 0px;
   /* border-radius: 35px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   bottom: 16%;
   /* left: -5%; */
   margin-top: 20px;
