@@ -71,6 +71,11 @@ function changeContent(machineName) {
   document.querySelectorAll(".nav-item").forEach((item) => {
     if (item.textContent === machineName) {
       item.classList.add("active");
+      item.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center", // Aligns the item at the center of the container
+      });
     } else {
       item.classList.remove("active");
     }

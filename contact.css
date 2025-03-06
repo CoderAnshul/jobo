@@ -652,7 +652,7 @@
   border: none;
 }
 .hero {
-  height: 56vh;
+  height: 55.3vh;
 }
 @media (max-width: 768px) {
   .hero {
