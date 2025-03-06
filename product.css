@@ -634,6 +634,13 @@ a {
   max-width: 955px;
   /* max-height: 400px; */
 }
+.product-image-container .last {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: block;
+  max-width: 955px
+}
 
 .auxiliaries-image {
   max-width: 600px;

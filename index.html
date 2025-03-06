@@ -79,16 +79,19 @@
       }
 
       .slide {
-        width: 12.5%; /* 100% ÷ number of slides (8 slides total) */
-        flex: 0 0 12.5%;
+        width: 12.2%; /* 100% ÷ number of slides (8 slides total) */
+        /* flex: 0 0 12.5%; */
         min-height: 400px;
         position: relative;
         background: transparent;
+        margin: 10px 10px;
+        border-radius: 10px;
         transition: transform 0.3s;
       }
 
       .slide:hover {
         transform: translateY(5px);
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
       }
 
       .slide img {
@@ -542,7 +545,7 @@
             <div class="slides-wrapper" id="slidesWrapper">
               <div class="slides-track" id="slidesTrack">
                 <!-- Original slides -->
-                <div class="slide" data-index="0">
+                <a href="/product.html" class="slide" data-index="0">
                   <img
                     src="./images/product/prodone.png"
                     alt="16 Cavity Compression Molding Machine"
@@ -552,9 +555,9 @@
                       16 Cavity Compression Molding Machine
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="1">
+                <a class="slide" href="/product-two.html" data-index="1">
                   <img
                     src="./images/product/prodtwo.png"
                     alt="24 Cavity Cap Compression Machine"
@@ -564,9 +567,9 @@
                       24 Cavity Cap Compression Machine
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="2">
+                <a href="/product-three.html" class="slide" data-index="2">
                   <img
                     src="./images/product/capMaking.jpg"
                     alt="24 Cavity Cap Compression Machine"
@@ -574,9 +577,9 @@
                   <div class="slide-content">
                     <div class="slide-title">36 Cavity Cap Making Machine</div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="3">
+                <a href="/product-four.html" class="slide" data-index="3">
                   <img
                     src="./images/product/prodThree.png"
                     alt="16 Cavity Compression Molding Machine"
@@ -586,10 +589,10 @@
                       36 Cavity High Speed Cap Machine
                     </div>
                   </div>
-                </div>
+                </a>
 
                 <!-- Duplicate slides for the infinite loop effect -->
-                <div class="slide" data-index="4">
+                <a href="/product.html" class="slide" data-index="4">
                   <img
                     src="./images/product/prodone.png"
                     alt="16 Cavity Compression Molding Machine"
@@ -599,9 +602,9 @@
                       16 Cavity Compression Molding Machine
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="5">
+                <a href="/product-two.html" class="slide" data-index="5">
                   <img
                     src="./images/product/prodtwo.png"
                     alt="24 Cavity Cap Compression Machine"
@@ -611,9 +614,9 @@
                       24 Cavity Cap Compression Machine
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="6">
+                <a href="/product-three.html" class="slide" data-index="6">
                   <img
                     src="./images/product/prodThree.png"
                     alt="24 Cavity Cap Compression Machine"
@@ -621,9 +624,9 @@
                   <div class="slide-content">
                     <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>
                   </div>
-                </div>
+                </a>
 
-                <div class="slide" data-index="7">
+                <a href="/product-four.html" class="slide" data-index="7">
                   <img
                     src="./images/product/prodfour.png"
                     alt="16 Cavity Compression Molding Machine"
@@ -633,7 +636,7 @@
                       36 Cavity High Speed Cap Machine
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
               <!-- Indicators - removed the fifth indicator -->
