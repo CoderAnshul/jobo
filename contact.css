@@ -147,6 +147,7 @@
   background-size: cover;
   margin-bottom: 10px;
   margin-left: -20%;
+  
 }
 
 .contact-detail {
@@ -173,6 +174,30 @@
 }
 
 @media screen and (max-width: 900px) {
+  .jobo-container {
+    width: 90%;
+  }
+  .jobo-container-form {
+    gap: 40px;
+    width: 100%;
+  }
+
+  .jobo-contact-form h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .contact-detail {
+    position: relative;
+    top: 20%;
+    right: 0;
+
+    width: 100%;
+  }
+  .jobo-form {
+    padding: 20px 20px;
+  }
+
   .navbar {
     height: auto;
     min-height: 80px;
@@ -450,7 +475,7 @@
 }
 
 .jobo-container {
-  margin: 0 70px;
+  margin: 0 10px;
   /* padding: 50px 20px; */
 }
 
@@ -677,6 +702,7 @@
   }
   .jobo-map-container {
     width: 100%;
+    margin-right: -50px;
   }
   .jobo-heading {
     font-size: 32px;
