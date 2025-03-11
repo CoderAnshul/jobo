@@ -112,6 +112,7 @@
         font-weight: bold;
         color: #333;
         text-align: center;
+        text-decoration: underline;
       }
 
       .indicators {
@@ -426,7 +427,7 @@
         </div>
         <div class="stat-item">
           <div class="count-wrapper">
-            <span class="stat-number" data-count="50">0</span><span>+</span>
+            <span class="stat-number" data-count="65">0</span><span>+</span>
           </div>
           <p class="stat-label">Countries</p>
         </div>
@@ -952,11 +953,11 @@
         style.textContent = `
         .nav-btn {
             position: absolute;
-            top: 94%;
+            top: 79%;
             transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: #ffffffb3;
             border: none;
-            width: 30px;
+            width: 50px;
             height: 50px;
             font-size: 18px;
             display: flex;
@@ -965,25 +966,29 @@
             cursor: pointer;
             z-index: 10;
             font-size: 28px;
-            padding-bottom: 2px;
-            //  background: #f07e26;
         }
         .prev-btn {
-             border-radius: 30px 0px 0px 30px;
-            right: 60px;
-             box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.1);
-                         color : "#ff7834";
-
-
+            border-radius: 100%;
+            left: -250px;
+            padding-bottom : 3.5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            color : "#ff7834";
         }
+            .prev-btn:hover {
+                background: #ff7834;
+                color : white;
+              }
         .next-btn {
-                     box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
-
-         border-radius: 00px 30px 30px 0px;
-            right: 35px;
-                        color : "#ff7834";
-
-        }
+             padding-bottom : 3.5px;
+             box-shadow: 100%;
+             background: #ff7834;
+             border-radius:100%;
+             left: -190px;
+             color : white;
+           }
+         .next-btn:hover {
+            background: white;
+            color: #ff7834;}
     `;
         document.head.appendChild(style);
 

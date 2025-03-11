@@ -57,11 +57,15 @@
         height: 30%;
         object-fit: cover;
       }
-
       .design-slide-item h2 {
+        margin-top: 20px;
         font-size: 20px;
-        text-align: center;
+        text-align: left;
       }
+      .design-slide-item:hover h2 {
+        color: #ff7834;
+      }
+
       .design-info-box {
         flex: 1;
         background-color: white;
@@ -153,7 +157,9 @@
         flex-direction: column;
         justify-content: space-between;
       }
-
+      .design-content-wrap h1 {
+        color: black;
+      }
       .design-nav-controls {
         position: absolute;
         bottom: 20px;
@@ -486,7 +492,7 @@
       </div>
     </section>
 
-    <div class="section-wrapper container" style="margin-top: 50px">
+    <div class="section-wrapper .container" style="margin-top: 50px">
       <div class="container-heading">
         <h2 class="title">
           Key Features of the Rotary Cap Compression Molding Machine
@@ -519,8 +525,7 @@
             </div>
             <div class="content-image">
               <img
-                style="width: 100px"
-                src="./images/product/prodnine.png"
+                src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
             </div>
@@ -535,8 +540,7 @@
             </div>
             <div class="content-image">
               <img
-                style="width: 100px"
-                src="./images/product/prodnine.png"
+                src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
             </div>
@@ -554,8 +558,7 @@
             </div>
             <div class="content-image">
               <img
-                style="width: 100px"
-                src="./images/product/prodnine.png"
+                src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
             </div>
@@ -573,8 +576,7 @@
             </div>
             <div class="content-image">
               <img
-                style="width: 100px"
-                src="./images/product/prodnine.png"
+                src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
             </div>
@@ -593,7 +595,7 @@
             <div class="content-image">
               <img
                 style="width: 100px"
-                src="./images/product/prodnine.png"
+                src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
             </div>
@@ -781,10 +783,7 @@
                 src="./images/product/prodtwo.png"
                 alt="Minimalist living room with white furniture"
               />
-              <h2>
-                24 Cavity Cap Compression <br />
-                Machine
-              </h2>
+              <h2 class="name">24 Cavity Cap Compression Machine</h2>
               <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
             <div class="design-slide-item">
@@ -792,7 +791,7 @@
                 src="./images/product/prodtwo.png"
                 alt="Luxury bathroom with freestanding tub"
               />
-              <h2>36 CAVITY CAP MAKING MACHINE</h2>
+              <h2 class="name">36 CAVITY CAP MAKING MACHINE</h2>
               <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
 
@@ -800,8 +799,9 @@
               <img
                 src="./images/product/prodThree.png"
                 alt="Minimalist living room with white furniture"
+                style="transform: scale(0.8)"
               />
-              <h2>36 Cavity High Speed Cap Machine</h2>
+              <h2 class="name">36 Cavity High Speed Cap Machine</h2>
               <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
           </div>
@@ -853,7 +853,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-above">
+    <!-- <div class="footer-above">
       <div class="contact-info">
         <div class="contact-item">
           <div class="icon">
@@ -900,7 +900,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <footer class="footer">
       <div class="footer-content">
         <div class="left-section">
@@ -927,18 +927,40 @@
         </div>
 
         <div class="navigation">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About Us</a>
-          <a href="#">Blog</a>
-          <a href="/videos.html">Video</a>
-          <a href="#">Contact Us</a>
+          <h3>Products</h3>
+
+          <div>
+            <a href="/product.html">16 Cavity Compression Molding Machine</a>
+            <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
+            <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+            <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+          </div>
         </div>
 
         <div class="products">
-          <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-          <a href="/product-three.html">24 Cavity Cap Compression Machine</a>
-          <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
-          <a href="/product.html">16 Cavity Compression Molding Machine</a>
+          <h2>Contact details</h2>
+          <div class="footer-item">
+            <img
+              style="margin-top: -60px"
+              src="/images/icons/address.png"
+              alt="JOBO INDIA"
+            />
+            <div>
+              <h4>Address</h4>
+              Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll
+              Plaza,<br />
+              At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA
+            </div>
+          </div>
+
+          <div class="footer-item" style="margin-bottom: 10px">
+            <img src="/images/icons/mail.png" alt="JOBO INDIA" />
+            <div>info@joboindia.com</div>
+          </div>
+          <div class="footer-item">
+            <img src="/images/icons/call_white.png" alt="JOBO INDIA" />
+            <div>+91 84694 51013</div>
+          </div>
         </div>
       </div>
     </footer>
