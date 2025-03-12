@@ -27,9 +27,9 @@ p {
     max-width: 1400px;
     /* padding: 20px; */
 }
-.container-heading{
-    padding: 0px 90px;
-}
+/*.container-heading{*/
+/*    padding: 0px 60px;*/
+/*}*/
 .title {
     font-size: 2.2rem;
     font-weight: bold;
@@ -506,7 +506,7 @@ p {
   }
 
   .section-wrapper{
-    margin: 0;
+    margin: 0 auto;
   }
   
   
@@ -518,7 +518,7 @@ p {
     overflow-x: auto;
     background-color: white;
     border-bottom: 1px solid #e0e0e0;
-    padding: 0 90px;
+    /*padding: 0 90px;*/
   }
   
   .tab-item {
@@ -1173,19 +1173,49 @@ p {
 
 /* ----------------- footer -------------  */
 
-
 .footer {
-    background-color: #404040;
-    padding: 0px 80px 80px 50px;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    min-height: 300px;
+  background-color: #404040;
+  padding: 0px 80px 30px 50px !important;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 300px;
 }
 
 .footer-above {
-    padding: 30px 50px;
-    background-color: #333333;
+  padding: 30px 50px;
+  background-color: #333333;
 }
+
+.links-2 {
+  margin-top: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.links-2 a {
+  padding-bottom: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.links-2 a:hover {
+  color: #ffffff64;
+}
+
+.Copyright {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.Copyright p {
+  color: white !important;
+}
+
 
 .footer-content {
     display: flex;

@@ -6,13 +6,64 @@
     <title>Cap Compression Molding</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+    .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* Dark overlay */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10001;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Modal content */
+        .modal-content {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            text-align: center;
+            max-height:500px;
+            height:fit-content;
+            max-width:600px;
+        
+        }
+
+        /* Image inside modal */
+        .modal-content img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit:contain;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+        }
       .cta-button {
         display: flex;
         align-items: center;
         gap: 20px;
-        background-color: #ff7834;
-        color: white;
-        padding: 10px 10px 10px 20px;
+        /*background-color: #ff7834;*/
+        color: black;
+        padding: 10px 0px 10px 0px;
         border-radius: 4px;
         width: fit-content;
         text-decoration: none;
@@ -20,10 +71,16 @@
         font-size: 18px;
         transition: all 0.3s ease;
       }
+        .slide { 
+                    text-decoration: none !important;
 
+        }
       .cta-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+      .cta-button:hover .button-arrow{
+          margin-left:10px;
+          border-radius: 30px;
       }
 
       .button-arrow {
@@ -39,7 +96,7 @@
         justify-content: center;
         align-items: center;
         color: #ff7834;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
       }
       .arrow {
         /* margin-left: 12px; */
@@ -79,31 +136,49 @@
       }
 
       .slide {
-        width: 12.2%; /* 100% ÷ number of slides (8 slides total) */
+        width: fit-content; /* 100% ÷ number of slides (8 slides total) */
         /* flex: 0 0 12.5%; */
         min-height: 400px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
         position: relative;
         background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.053);
         margin: 10px 10px;
         border-radius: 10px;
+        background-color: white;
         transition: transform 0.3s;
-      }
-
-      .slide:hover {
-        transform: translateY(5px);
         box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
       }
 
-      .slide img {
+    .slide:hover .slide-content .slide-title {
+        color: #ff7834;
+      }
+    
+
+  .slide .image-container {
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        border-radius: 20px;
+        width: 300px;
+        overflow: hidden;
+        height: 260px; /* Fixed height */
+      }
+      
+      .image-container:hover img {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+      .image-container img {
+        height: 100%;
         width: 100%;
-        height: 320px; /* Fixed height */
         object-fit: contain;
         background-color: transparent;
         padding: 20px;
       }
-
       .slide-content {
-        padding: 20px;
+        width: 300px;
+        padding-top: 20px;
         padding-bottom: 30px;
       }
 
@@ -111,9 +186,29 @@
         font-size: 16px;
         font-weight: bold;
         color: #333;
-        text-align: center;
-        text-decoration: underline;
+        line-height: 24px;
+        text-align: left;
       }
+      
+      .slide .arrow {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: 1px solid black;
+      }
+
+      .slide .arrow img {
+        height: 80%;
+        width: 80%;
+      }
+
+     
 
       .indicators {
         display: flex;
@@ -214,117 +309,107 @@
         }
       }
 
-      .machine-image {
-        position: absolute;
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .machine-image img {
-        position: absolute;
-      }
-
-      .machine-image img:nth-child(1) {
-        /* punch.png */
-        top: 0;
-        right: 26%;
-        z-index: 100;
-        max-height: 350px;
-        animation: slideFromTop 1.2s ease-out;
-      }
-
-      .machine-image img:nth-child(2) {
-        /* CAP.png */
-        top: 43%;
-        right: 18%;
-        z-index: 100;
-        max-height: 150px;
-        animation: fadeIn 1.5s ease-in;
-      }
-
-      .machine-image img:nth-child(3) {
-        /* cavity.png */
-        bottom: 0;
-        right: 0%;
-        z-index: 100;
-        max-height: 330px;
-        animation: slideFromBottom 1s ease-out 0.3s;
-        animation-fill-mode: both;
-      }
-
-      @keyframes slideFromTop {
-        0% {
-          transform: translateY(-100px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: scale(0.7);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      @keyframes slideFromBottom {
-        0% {
-          transform: translateY(100px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-
-      @media (min-width: 1600px) {
-        .machine-image img:nth-child(1) {
-          /* punch.png */
-          top: 0;
-          right: 28%;
-          z-index: 100;
-          max-height: 42vh;
-          animation: slideFromTop 1.2s ease-out;
-        }
-        .history-section {
-          margin-left: 3.5%;
-        }
-
-        .machine-image img:nth-child(2) {
-          /* CAP.png */
-          top: 40%;
-          right: 20%;
-          z-index: 100;
-          max-height: 170px;
-          animation: fadeIn 1.5s ease-in;
-        }
-
-        .machine-image img:nth-child(3) {
-          /* cavity.png */
-          bottom: 0;
-          right: 0%;
-          z-index: 100;
-          max-height: 45vh;
-          animation: slideFromBottom 1s ease-out 0.3s;
-          animation-fill-mode: both;
-        }
-      }
-      @media (max-width: 500px) {
-        .machine-image {
-          position: absolute;
-          width: 100%;
-          overflow: hidden;
-          display: none;
-        }
-      }
+.machine-image {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+.machine-image img {
+  position: absolute;
+}
+.machine-image img:nth-child(1) {
+  /* punch.png */
+  top: 0;
+  right: 400px;
+  z-index: 100;
+  max-height: 350px;
+  animation: slideFromTopRight 1.2s ease-out;
+}
+.machine-image img:nth-child(2) {
+  /* CAP.png */
+  top: 43%;
+  right: 280px;
+  z-index: 100;
+  max-height: 150px;
+  animation: fadeIn 1.5s ease-in;
+}
+.machine-image img:nth-child(3) {
+  /* cavity.png */
+  bottom: 0;
+  right: 0%;
+  z-index: 100;
+  max-height: 330px;
+  animation: slideFromBottomRight 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes slideFromTopRight {
+  0% {
+    transform: translate(-100px, -100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideFromBottomRight {
+  0% {
+    transform: translate(100px, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@media (min-width: 1600px) {
+  .machine-image img:nth-child(1) {
+    /* punch.png */
+    top: 0;
+    right: 28%;
+    z-index: 100;
+    max-height: 42vh;
+    animation: slideFromTopRight 1.2s ease-out;
+  }
+  .history-section {
+    margin-left: 3.5%;
+  }
+  .machine-image img:nth-child(2) {
+    /* CAP.png */
+    top: 40%;
+    right: 20%;
+    z-index: 100;
+    max-height: 170px;
+    animation: fadeIn 1.5s ease-in;
+  }
+  .machine-image img:nth-child(3) {
+    /* cavity.png */
+    bottom: 0;
+    right: 0%;
+    z-index: 100;
+    max-height: 45vh;
+    animation: slideFromBottomRight 1s ease-out 0.3s;
+    animation-fill-mode: both;
+  }
+}
+@media (max-width: 500px) {
+  .machine-image {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+  }
+}
       @media (max-width: 1100px) {
         .history-section {
           padding-left: 2% !important;
@@ -333,6 +418,12 @@
     </style>
   </head>
   <body>
+      <div class="modal-overlay" id="popupModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <img src="/images/popUp.jpg" alt="Popup Image">
+        </div>
+    </div>
     <nav class="navbar">
       <a href="/index.html">
         <div class="logo" style="margin-bottom: 0px">
@@ -540,102 +631,254 @@
             </div>
           </div>
         </div>
-        <div class="slider-container">
+        <!--<div class="slider-container">-->
+          <!-- Slides wrapper -->
+        <!--  <div>-->
+        <!--    <div class="slides-wrapper" id="slidesWrapper">-->
+        <!--      <div class="slides-track" id="slidesTrack">-->
+                <!-- Original slides -->
+        <!--        <div class="slide" data-index="0">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodone.png"-->
+        <!--            alt="16 Cavity Compression Molding Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              16 Cavity Compression Molding Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="1">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodtwo.png"-->
+        <!--            alt="24 Cavity Cap Compression Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              24 Cavity Cap Compression Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="2">-->
+        <!--          <img-->
+        <!--            src="./images/product/capMaking.jpg"-->
+        <!--            alt="24 Cavity Cap Compression Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">36 Cavity Cap Making Machine</div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="3">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodThree.png"-->
+        <!--            alt="16 Cavity Compression Molding Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              36 Cavity High Speed Cap Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+                <!-- Duplicate slides for the infinite loop effect -->
+        <!--        <div class="slide" data-index="4">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodone.png"-->
+        <!--            alt="16 Cavity Compression Molding Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              16 Cavity Compression Molding Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="5">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodtwo.png"-->
+        <!--            alt="24 Cavity Cap Compression Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              24 Cavity Cap Compression Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="6">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodThree.png"-->
+        <!--            alt="24 Cavity Cap Compression Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="slide" data-index="7">-->
+        <!--          <img-->
+        <!--            src="./images/product/prodfour.png"-->
+        <!--            alt="16 Cavity Compression Molding Machine"-->
+        <!--          />-->
+        <!--          <div class="slide-content">-->
+        <!--            <div class="slide-title">-->
+        <!--              36 Cavity High Speed Cap Machine-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--      </div>-->
+
+              <!-- Indicators - removed the fifth indicator -->
+        <!--      <div class="indicators" id="indicators">-->
+        <!--        <span class="indicator active" data-index="0"></span>-->
+        <!--        <span class="indicator" data-index="1"></span>-->
+        <!--        <span class="indicator" data-index="2"></span>-->
+        <!--        <span class="indicator" data-index="3"></span>-->
+        <!--      </div>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</div>-->
+         <div class="slider-container">
           <!-- Slides wrapper -->
           <div>
             <div class="slides-wrapper" id="slidesWrapper">
               <div class="slides-track" id="slidesTrack">
                 <!-- Original slides -->
-                <a href="/product.html" class="slide" data-index="0">
-                  <img
-                    src="./images/product/prodone.png"
-                    alt="16 Cavity Compression Molding Machine"
-                  />
+                <a href="/product.html  " class="slide" data-index="0">
+                  <div class="image-container">
+                    <img
+                      src="./images/product/prodone.png"
+                      alt="16 Cavity Compression Molding Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       16 Cavity Compression Molding Machine
                     </div>
+                  </div>
+
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
                   </div>
                 </a>
 
                 <a class="slide" href="/product-two.html" data-index="1">
-                  <img
-                    src="./images/product/prodtwo.png"
-                    alt="24 Cavity Cap Compression Machine"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="./images/factory/PHOTOS/CCM MACHINES/capMaking.jpg"
+                      alt="24 Cavity Cap Compression Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       24 Cavity Cap Compression Machine
                     </div>
                   </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
+                  </div>
                 </a>
 
                 <a href="/product-three.html" class="slide" data-index="2">
-                  <img
-                    src="./images/product/capMaking.jpg"
-                    alt="24 Cavity Cap Compression Machine"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="./images/product/capMaking.jpg"
+                      alt="24 Cavity Cap Compression Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">36 Cavity Cap Making Machine</div>
+                  </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
                   </div>
                 </a>
 
                 <a href="/product-four.html" class="slide" data-index="3">
-                  <img
-                    src="./images/product/prodThree.png"
-                    alt="16 Cavity Compression Molding Machine"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="./images/product/prodThree.png"
+                      alt="16 Cavity Compression Molding Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       36 Cavity High Speed Cap Machine
                     </div>
                   </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
+                  </div>
                 </a>
 
                 <!-- Duplicate slides for the infinite loop effect -->
-                <a href="/product.html" class="slide" data-index="4">
-                  <img
-                    src="./images/product/prodone.png"
-                    alt="16 Cavity Compression Molding Machine"
-                  />
+                <a href="/product.html  " class="slide" data-index="4">
+                  <div class="image-container">
+                    <img
+                      src="./images/product/prodone.png"
+                      alt="16 Cavity Compression Molding Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       16 Cavity Compression Molding Machine
                     </div>
                   </div>
+
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
+                  </div>
                 </a>
 
-                <a href="/product-two.html" class="slide" data-index="5">
-                  <img
-                    src="./images/product/prodtwo.png"
-                    alt="24 Cavity Cap Compression Machine"
-                  />
+                <a class="slide" href="/product-two.html" data-index="5">
+                  <div class="image-container">
+                    <img
+                      src="./images/factory/PHOTOS/CCM MACHINES/capMaking.jpg"
+                      alt="24 Cavity Cap Compression Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       24 Cavity Cap Compression Machine
                     </div>
                   </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
+                  </div>
                 </a>
 
                 <a href="/product-three.html" class="slide" data-index="6">
-                  <img
-                    src="./images/product/prodThree.png"
-                    alt="24 Cavity Cap Compression Machine"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="./images/product/capMaking.jpg"
+                      alt="24 Cavity Cap Compression Machine"
+                    />
+                  </div>
                   <div class="slide-content">
-                    <div class="slide-title">36 CAVITY CAP MAKING MACHINE</div>
+                    <div class="slide-title">36 Cavity Cap Making Machine</div>
+                  </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
                   </div>
                 </a>
 
                 <a href="/product-four.html" class="slide" data-index="7">
-                  <img
-                    src="./images/product/prodfour.png"
-                    alt="16 Cavity Compression Molding Machine"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="./images/product/prodThree.png"
+                      alt="16 Cavity Compression Molding Machine"
+                    />
+                  </div>
                   <div class="slide-content">
                     <div class="slide-title">
                       36 Cavity High Speed Cap Machine
                     </div>
+                  </div>
+                  <div class="arrow">
+                    <img src="./images/right-up.png" alt="" />
                   </div>
                 </a>
               </div>
@@ -716,22 +959,18 @@
             </div>
             <div
               style="
-                display: flex;
-                background-color: white;
+              display: flex;
                 border-radius: 50%;
-                height: 60px;
-                width: 60px;
                 padding-bottom: 5px;
                 min-height: 65px;
                 min-width: 70px;
-                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
                 position: absolute;
                 bottom: 10px;
                 right: 10px;
-                z-index: 20;
+                z-index: 20;;
               "
             >
               <span class="arrow" onclick="moveSlide(-1)">&#8249;</span>
@@ -756,55 +995,55 @@
       </div>
     </div>
 
-    <div class="footer-above">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="icon">
-            <img src="/images/icons/address.png" alt="JOBO INDIA" />
-          </div>
-          <div>
-            <h4>Address</h4>
-            <div>
-              Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll
-              Plaza,<br />
-              At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA
-            </div>
-          </div>
-        </div>
+    <!--<div class="footer-above">-->
+    <!--  <div class="contact-info">-->
+    <!--    <div class="contact-item">-->
+    <!--      <div class="icon">-->
+    <!--        <img src="/images/icons/address.png" alt="JOBO INDIA" />-->
+    <!--      </div>-->
+    <!--      <div>-->
+    <!--        <h4>Address</h4>-->
+    <!--        <div>-->
+    <!--          Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll-->
+    <!--          Plaza,<br />-->
+    <!--          At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
 
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            justify-content: space-between;
-          "
-        >
-          <div class="contact-item" style="margin-bottom: 15px">
-            <div class="icon">
-              <img src="/images/icons/call_white.png" alt="JOBO INDIA" />
-            </div>
-            <div>+91 84694 51013</div>
-          </div>
+    <!--    <div-->
+    <!--      style="-->
+    <!--        display: flex;-->
+    <!--        flex-direction: column;-->
+    <!--        align-items: start;-->
+    <!--        justify-content: space-between;-->
+    <!--      "-->
+    <!--    >-->
+    <!--      <div class="contact-item" style="margin-bottom: 15px">-->
+    <!--        <div class="icon">-->
+    <!--          <img src="/images/icons/call_white.png" alt="JOBO INDIA" />-->
+    <!--        </div>-->
+    <!--        <div>+91 84694 51013</div>-->
+    <!--      </div>-->
 
-          <div
-            class="contact-item"
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 18px;
-            "
-          >
-            <div class="icon" style="margin-bottom: 10px">
-              <img src="/images/icons/mail.png" alt="JOBO INDIA" />
-            </div>
-            <div>info@joboindia.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
+    <!--      <div-->
+    <!--        class="contact-item"-->
+    <!--        style="-->
+    <!--          display: flex;-->
+    <!--          justify-content: center;-->
+    <!--          align-items: center;-->
+    <!--          gap: 18px;-->
+    <!--        "-->
+    <!--      >-->
+    <!--        <div class="icon" style="margin-bottom: 10px">-->
+    <!--          <img src="/images/icons/mail.png" alt="JOBO INDIA" />-->
+    <!--        </div>-->
+    <!--        <div>info@joboindia.com</div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+   <footer class="footer">
       <div class="footer-content">
         <div class="left-section">
           <div class="logo">
@@ -830,19 +1069,53 @@
         </div>
 
         <div class="navigation">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About Us</a>
-          <a href="#">Blog</a>
-          <a href="/videos.html">Video</a>
-          <a href="#">Contact Us</a>
+          <h3>Products</h3>
+
+          <div>
+            <a href="/product.html">16 Cavity Compression Molding Machine</a>
+            <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
+            <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+            <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+          </div>
         </div>
 
         <div class="products">
-          <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-          <a href="/product-three.html">24 Cavity Cap Compression Machine</a>
-          <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
-          <a href="/product.html">16 Cavity Compression Molding Machine</a>
+          <h2>Contact details</h2>
+          <div class="footer-item">
+            <img src="/images/icons/call_white.png" alt="JOBO INDIA" />
+            <div>+91 84694 51013</div>
+          </div>
+          <div class="footer-item" style="margin-bottom: 10px">
+            <img src="/images/icons/mail.png" alt="JOBO INDIA" />
+            <div>info@joboindia.com</div>
+          </div>
+          <div class="footer-item">
+            <img
+              style="margin-top: -60px"
+              src="/images/icons/address.png"
+              alt="JOBO INDIA"
+            />
+            <div>
+              <h4>Address</h4>
+              Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll
+              Plaza,<br />
+              At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="links-2 container">
+        <a href="/">Home</a>
+        <a href="/product.html">About</a>
+        <a href="/about.html">Products</a>
+        <a href="/product.html">Blog</a>
+        <a href="/videos.html">Video</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
+      <div class="Copyright">
+        <p>Copyright © 2024 JOBO All Rights Reserved.</p>
       </div>
     </footer>
 
@@ -863,7 +1136,7 @@
           isTransitioning = true;
 
           // Calculate percentage for translateX based on slide index
-          const translateValue = index * (100 / slides.length);
+          const translateValue = index * (60 / slides.length);
 
           // Update indicators (only for original slides, not duplicates)
           indicators.forEach((indicator, i) => {
@@ -985,6 +1258,8 @@
              border-radius:100%;
              left: -190px;
              color : white;
+                                      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
            }
          .next-btn:hover {
             background: white;
@@ -1016,8 +1291,23 @@
         });
       });
     </script>
+    <script>
+        // Show the modal when the page loads
+        window.onload = function () {
+            document.getElementById("popupModal").style.visibility = "visible";
+            document.getElementById("popupModal").style.opacity = "1";
+        };
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("popupModal").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("popupModal").style.visibility = "hidden";
+            }, 300); // Delay to match opacity transition
+        }
+    </script>
     <script src="script.js"></script>
     <script src="hoverMenu.js"></script>
-    <!-- <script src="hideinspect.js"></script> -->
+     <!--<script src="hideinspect.js"></script> -->
   </body>
 </html>

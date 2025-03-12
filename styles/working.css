@@ -456,7 +456,7 @@ body {
   bottom: -10px;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 3px;
   background-color: #ff6b00;
 }
 
@@ -491,7 +491,7 @@ body {
 }
 .content-with-image {
   height: 180px;
-  margin-right: 28%;
+  margin-right: 27%;
 }
 .content-with-image .content-image img {
   width: 300px;
@@ -522,7 +522,7 @@ body {
 
 .footer {
   background-color: #404040;
-  padding: 0px 80px 80px 50px;
+  padding: 0px 80px 30px 50px !important;
   color: #fff;
   font-family: Arial, sans-serif;
   min-height: 300px;
@@ -533,11 +533,41 @@ body {
   background-color: #333333;
 }
 
+.links-2 {
+  margin-top: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.links-2 a {
+  padding-bottom: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.links-2 a:hover {
+  color: #ffffff64;
+}
+
+.Copyright {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.Copyright p {
+  color: white !important;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
   gap: 60px;
-  max-width: 2000px;
+  max-width: 1100px !important;
   margin: 0 auto;
 }
 .left-section {
@@ -652,10 +682,15 @@ body {
   transition: color 0.3s ease;
 }
 
+.footer-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .products a:hover {
   color: #ccc;
 }
-
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
   .footer {
@@ -692,6 +727,7 @@ body {
   .footer {
     padding: 0px 30px 50px 20px;
   }
+
 
   .content-with-image {
     height: 400px;
@@ -895,7 +931,7 @@ body {
   bottom: -10px;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 3px;
   background-color: #ff6b00;
 }
 
@@ -993,7 +1029,7 @@ body {
   padding: 0px 0px;
   color: #000;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 2.2rem;
   width: fit-content;
   text-align: center;
   text-transform: uppercase;
@@ -1174,12 +1210,6 @@ body {
   width: 40px;
   height: 40px;
   display: block;
-}
-
-.footer-item {
-  display: flex;
-  gap: 20px;
-  align-items: center;
 }
 
 .feature-title {
