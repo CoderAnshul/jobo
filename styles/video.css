@@ -570,23 +570,22 @@ p {
   line-height: 1.6;
   margin-bottom: 10px;
   font-weight: 500;
-  max-width: 600px;
+  max-width: 500px;
 }
 
-/* Content with image layout */
-.content-with-image {
+Content with image layout .content-with-image {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
 }
-
+/* 
 .content-text {
   flex: 1;
   padding-right: 20px;
-}
+} */
 
-.content-image {
+/* .content-image {
   width: 120px;
   height: 120px;
   background-color: #ffffff;
@@ -600,7 +599,7 @@ p {
 .content-image img {
   width: 100%;
   height: auto;
-}
+} */
 
 .step-connector {
   max-width: 100px;

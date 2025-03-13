@@ -6,57 +6,56 @@
     <title>Cap Compression Molding</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-    .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2); /* Dark overlay */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10001;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2); /* Dark overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10001;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
 
-        /* Modal content */
-        .modal-content {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            text-align: center;
-            max-height:500px;
-            height:fit-content;
-            max-width:600px;
-        
-        }
+      /* Modal content */
+      .modal-content {
+        position: relative;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+        max-height: 500px;
+        height: fit-content;
+        max-width: 600px;
+      }
 
-        /* Image inside modal */
-        .modal-content img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            object-fit:contain;
-        }
+      /* Image inside modal */
+      .modal-content img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+      }
 
-        /* Close button */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            background: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 50%;
-        }
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        background: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 50%;
+      }
       .cta-button {
         display: flex;
         align-items: center;
@@ -71,16 +70,15 @@
         font-size: 18px;
         transition: all 0.3s ease;
       }
-        .slide { 
-                    text-decoration: none !important;
-
-        }
+      .slide {
+        text-decoration: none !important;
+      }
       .cta-button:hover {
         transform: translateY(-2px);
       }
-      .cta-button:hover .button-arrow{
-          margin-left:10px;
-          border-radius: 30px;
+      .cta-button:hover .button-arrow {
+        margin-left: 10px;
+        border-radius: 30px;
       }
 
       .button-arrow {
@@ -138,7 +136,7 @@
       .slide {
         width: fit-content; /* 100% ÷ number of slides (8 slides total) */
         /* flex: 0 0 12.5%; */
-        min-height: 400px;
+        min-height: 390px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -152,29 +150,30 @@
         box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
       }
 
-    .slide:hover .slide-content .slide-title {
+      .slide:hover .slide-content .slide-title {
         color: #ff7834;
       }
-    
 
-  .slide .image-container {
-        border: 1px solid rgba(0, 0, 0, 0.14);
+      .slide .image-container {
+        /* border: 1px solid rgba(0, 0, 0, 0.14); */
         border-radius: 20px;
-        width: 300px;
+        width: 310px;
         overflow: hidden;
-        height: 260px; /* Fixed height */
+        height: fit-content; /* Fixed height */
       }
-      
+
       .image-container:hover img {
+        height: 100%;
+        width: 100%;
         transform: scale(1.1);
         transition: transform 0.3s ease;
       }
       .image-container img {
         height: 100%;
         width: 100%;
+        border-radius: 20px;
         object-fit: contain;
         background-color: transparent;
-        padding: 20px;
       }
       .slide-content {
         width: 300px;
@@ -189,7 +188,7 @@
         line-height: 24px;
         text-align: left;
       }
-      
+
       .slide .arrow {
         position: absolute;
         bottom: 20px;
@@ -207,8 +206,6 @@
         height: 80%;
         width: 80%;
       }
-
-     
 
       .indicators {
         display: flex;
@@ -309,107 +306,107 @@
         }
       }
 
-.machine-image {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-}
-.machine-image img {
-  position: absolute;
-}
-.machine-image img:nth-child(1) {
-  /* punch.png */
-  top: 0;
-  right: 400px;
-  z-index: 100;
-  max-height: 350px;
-  animation: slideFromTopRight 1.2s ease-out;
-}
-.machine-image img:nth-child(2) {
-  /* CAP.png */
-  top: 43%;
-  right: 280px;
-  z-index: 100;
-  max-height: 150px;
-  animation: fadeIn 1.5s ease-in;
-}
-.machine-image img:nth-child(3) {
-  /* cavity.png */
-  bottom: 0;
-  right: 0%;
-  z-index: 100;
-  max-height: 330px;
-  animation: slideFromBottomRight 1s ease-out 0.3s;
-  animation-fill-mode: both;
-}
-@keyframes slideFromTopRight {
-  0% {
-    transform: translate(-100px, -100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes slideFromBottomRight {
-  0% {
-    transform: translate(100px, 100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@media (min-width: 1600px) {
-  .machine-image img:nth-child(1) {
-    /* punch.png */
-    top: 0;
-    right: 28%;
-    z-index: 100;
-    max-height: 42vh;
-    animation: slideFromTopRight 1.2s ease-out;
-  }
-  .history-section {
-    margin-left: 3.5%;
-  }
-  .machine-image img:nth-child(2) {
-    /* CAP.png */
-    top: 40%;
-    right: 20%;
-    z-index: 100;
-    max-height: 170px;
-    animation: fadeIn 1.5s ease-in;
-  }
-  .machine-image img:nth-child(3) {
-    /* cavity.png */
-    bottom: 0;
-    right: 0%;
-    z-index: 100;
-    max-height: 45vh;
-    animation: slideFromBottomRight 1s ease-out 0.3s;
-    animation-fill-mode: both;
-  }
-}
-@media (max-width: 500px) {
-  .machine-image {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    display: none;
-  }
-}
+      .machine-image {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+      }
+      .machine-image img {
+        position: absolute;
+      }
+      .machine-image img:nth-child(1) {
+        /* punch.png */
+        top: 0;
+        right: 400px;
+        z-index: 100;
+        max-height: 350px;
+        animation: slideFromTopRight 1.2s ease-out;
+      }
+      .machine-image img:nth-child(2) {
+        /* CAP.png */
+        top: 43%;
+        right: 280px;
+        z-index: 100;
+        max-height: 150px;
+        animation: fadeIn 1.5s ease-in;
+      }
+      .machine-image img:nth-child(3) {
+        /* cavity.png */
+        bottom: 0;
+        right: 0%;
+        z-index: 100;
+        max-height: 330px;
+        animation: slideFromBottomRight 1s ease-out 0.3s;
+        animation-fill-mode: both;
+      }
+      @keyframes slideFromTopRight {
+        0% {
+          transform: translate(-100px, -100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes slideFromBottomRight {
+        0% {
+          transform: translate(100px, 100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      @media (min-width: 1600px) {
+        .machine-image img:nth-child(1) {
+          /* punch.png */
+          top: 0;
+          right: 28%;
+          z-index: 100;
+          max-height: 42vh;
+          animation: slideFromTopRight 1.2s ease-out;
+        }
+        .history-section {
+          margin-left: 3.5%;
+        }
+        .machine-image img:nth-child(2) {
+          /* CAP.png */
+          top: 40%;
+          right: 20%;
+          z-index: 100;
+          max-height: 170px;
+          animation: fadeIn 1.5s ease-in;
+        }
+        .machine-image img:nth-child(3) {
+          /* cavity.png */
+          bottom: 0;
+          right: 0%;
+          z-index: 100;
+          max-height: 45vh;
+          animation: slideFromBottomRight 1s ease-out 0.3s;
+          animation-fill-mode: both;
+        }
+      }
+      @media (max-width: 500px) {
+        .machine-image {
+          position: absolute;
+          width: 100%;
+          overflow: hidden;
+          display: none;
+        }
+      }
       @media (max-width: 1100px) {
         .history-section {
           padding-left: 2% !important;
@@ -418,11 +415,11 @@
     </style>
   </head>
   <body>
-      <div class="modal-overlay" id="popupModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">×</button>
-            <img src="/images/popUp.jpg" alt="Popup Image">
-        </div>
+    <div class="modal-overlay" id="popupModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <img src="/images/popUp.jpg" alt="Popup Image" />
+      </div>
     </div>
     <nav class="navbar">
       <a href="/index.html">
@@ -632,11 +629,11 @@
           </div>
         </div>
         <!--<div class="slider-container">-->
-          <!-- Slides wrapper -->
+        <!-- Slides wrapper -->
         <!--  <div>-->
         <!--    <div class="slides-wrapper" id="slidesWrapper">-->
         <!--      <div class="slides-track" id="slidesTrack">-->
-                <!-- Original slides -->
+        <!-- Original slides -->
         <!--        <div class="slide" data-index="0">-->
         <!--          <img-->
         <!--            src="./images/product/prodone.png"-->
@@ -683,7 +680,7 @@
         <!--          </div>-->
         <!--        </div>-->
 
-                <!-- Duplicate slides for the infinite loop effect -->
+        <!-- Duplicate slides for the infinite loop effect -->
         <!--        <div class="slide" data-index="4">-->
         <!--          <img-->
         <!--            src="./images/product/prodone.png"-->
@@ -731,7 +728,7 @@
         <!--        </div>-->
         <!--      </div>-->
 
-              <!-- Indicators - removed the fifth indicator -->
+        <!-- Indicators - removed the fifth indicator -->
         <!--      <div class="indicators" id="indicators">-->
         <!--        <span class="indicator active" data-index="0"></span>-->
         <!--        <span class="indicator" data-index="1"></span>-->
@@ -741,7 +738,7 @@
         <!--    </div>-->
         <!--  </div>-->
         <!--</div>-->
-         <div class="slider-container">
+        <div class="slider-container">
           <!-- Slides wrapper -->
           <div>
             <div class="slides-wrapper" id="slidesWrapper">
@@ -750,7 +747,7 @@
                 <a href="/product.html  " class="slide" data-index="0">
                   <div class="image-container">
                     <img
-                      src="./images/product/prodone.png"
+                      src="./images/new-images/16CS.jpg"
                       alt="16 Cavity Compression Molding Machine"
                     />
                   </div>
@@ -761,14 +758,35 @@
                   </div>
 
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a class="slide" href="/product-two.html" data-index="1">
                   <div class="image-container">
                     <img
-                      src="./images/factory/PHOTOS/CCM MACHINES/capMaking.jpg"
+                      src="./images/new-images/24CS.jpg"
                       alt="24 Cavity Cap Compression Machine"
                     />
                   </div>
@@ -778,14 +796,35 @@
                     </div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a href="/product-three.html" class="slide" data-index="2">
                   <div class="image-container">
                     <img
-                      src="./images/product/capMaking.jpg"
+                      src="./images/new-images/36CS.jpg"
                       alt="24 Cavity Cap Compression Machine"
                     />
                   </div>
@@ -793,14 +832,35 @@
                     <div class="slide-title">36 Cavity Cap Making Machine</div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a href="/product-four.html" class="slide" data-index="3">
                   <div class="image-container">
                     <img
-                      src="./images/product/prodThree.png"
+                      src="./images/new-images/36CSS.jpg"
                       alt="16 Cavity Compression Molding Machine"
                     />
                   </div>
@@ -810,7 +870,28 @@
                     </div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
@@ -818,7 +899,7 @@
                 <a href="/product.html  " class="slide" data-index="4">
                   <div class="image-container">
                     <img
-                      src="./images/product/prodone.png"
+                      src="./images/new-images/16CS.jpg"
                       alt="16 Cavity Compression Molding Machine"
                     />
                   </div>
@@ -829,14 +910,35 @@
                   </div>
 
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a class="slide" href="/product-two.html" data-index="5">
                   <div class="image-container">
                     <img
-                      src="./images/factory/PHOTOS/CCM MACHINES/capMaking.jpg"
+                      src="./images/new-images/24CS.jpg"
                       alt="24 Cavity Cap Compression Machine"
                     />
                   </div>
@@ -846,14 +948,35 @@
                     </div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a href="/product-three.html" class="slide" data-index="6">
                   <div class="image-container">
                     <img
-                      src="./images/product/capMaking.jpg"
+                      src="./images/new-images/36CS.jpg"
                       alt="24 Cavity Cap Compression Machine"
                     />
                   </div>
@@ -861,14 +984,35 @@
                     <div class="slide-title">36 Cavity Cap Making Machine</div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
 
                 <a href="/product-four.html" class="slide" data-index="7">
                   <div class="image-container">
                     <img
-                      src="./images/product/prodThree.png"
+                      src="./images/new-images/36CSS.jpg"
                       alt="16 Cavity Compression Molding Machine"
                     />
                   </div>
@@ -878,7 +1022,28 @@
                     </div>
                   </div>
                   <div class="arrow">
-                    <img src="./images/right-up.png" alt="" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 7.5L6 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8 6.18791C8 6.18791 16.0479 5.50949 17.2692 6.73079C18.4906 7.95209 17.812 16 17.812 16"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </a>
               </div>
@@ -959,7 +1124,7 @@
             </div>
             <div
               style="
-              display: flex;
+                display: flex;
                 border-radius: 50%;
                 padding-bottom: 5px;
                 min-height: 65px;
@@ -970,7 +1135,7 @@
                 position: absolute;
                 bottom: 10px;
                 right: 10px;
-                z-index: 20;;
+                z-index: 20;
               "
             >
               <span class="arrow" onclick="moveSlide(-1)">&#8249;</span>
@@ -1043,81 +1208,78 @@
     <!--    </div>-->
     <!--  </div>-->
     <!--</div>-->
-   <footer class="footer">
-     
-    <div class="">
-      <div class="footer-content">
-        <div class="left-section">
-          <div class="logo">
-            <img src="/images/logo/logo_white.png" alt="JOBO INDIA" />
-          </div>
-
-          <div class="social-icons">
-            <div class="social-icon">
-              <img src="/images/icons/fb.png" alt="JOBO INDIA" />
+    <footer class="footer">
+      <div class="">
+        <div class="footer-content">
+          <div class="left-section">
+            <div class="logo">
+              <img src="/images/logo/logo_white.png" alt="JOBO INDIA" />
             </div>
-            <div class="social-icon">
-              <img src="/images/icons/linkedin.png" alt="JOBO INDIA" />
+
+            <div class="social-icons">
+              <div class="social-icon">
+                <img src="/images/icons/fb.png" alt="JOBO INDIA" />
+              </div>
+              <div class="social-icon">
+                <img src="/images/icons/linkedin.png" alt="JOBO INDIA" />
+              </div>
+              <div class="social-icon">
+                <img src="/images/icons/youtube.png" alt="JOBO INDIA" />
+              </div>
+              <div class="social-icon">
+                <img src="/images/icons/insta.png" alt="JOBO INDIA" />
+              </div>
             </div>
-            <div class="social-icon">
-              <img src="/images/icons/youtube.png" alt="JOBO INDIA" />
-            </div>
-            <div class="social-icon">
-              <img src="/images/icons/insta.png" alt="JOBO INDIA" />
-            </div>
+
+            <a href="#" class="get-direction">Get Direction</a>
           </div>
 
-          <a href="#" class="get-direction">Get Direction</a>
-        </div>
+          <div class="navigation">
+            <h3>Products</h3>
 
-        <div class="navigation">
-          <h3>Products</h3>
-
-          <div>
-            <a href="/product.html">16 Cavity Compression Molding Machine</a>
-            <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
-            <a href="/product-three.html">36 Cavity Cap Making Machine</a>
-            <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
-          </div>
-        </div>
-
-        <div class="products">
-          <h2>Contact details</h2>
-          <div class="footer-item">
-            <img src="/images/icons/call_white.png" alt="JOBO INDIA" />
-            <div>+91 84694 51013</div>
-          </div>
-          <div class="footer-item" style="margin-bottom: 10px">
-            <img src="/images/icons/mail.png" alt="JOBO INDIA" />
-            <div>info@joboindia.com</div>
-          </div>
-          <div class="footer-item">
-            <img
-              style="margin-top: -60px"
-              src="/images/icons/address.png"
-              alt="JOBO INDIA"
-            />
             <div>
-              <h4>Address</h4>
-              Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll
-              Plaza,<br />
-              At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA
+              <a href="/product.html">16 Cavity Compression Molding Machine</a>
+              <a href="/product-two.html">24 Cavity Cap Compression Machine</a>
+              <a href="/product-three.html">36 Cavity Cap Making Machine</a>
+              <a href="/product-four.html">36 Cavity High Speed Cap Machine</a>
+            </div>
+          </div>
+
+          <div class="products">
+            <h2>Contact details</h2>
+            <div class="footer-item">
+              <img src="/images/icons/call_white.png" alt="JOBO INDIA" />
+              <div>+91 84694 51013</div>
+            </div>
+            <div class="footer-item" style="margin-bottom: 10px">
+              <img src="/images/icons/mail.png" alt="JOBO INDIA" />
+              <div>info@joboindia.com</div>
+            </div>
+            <div class="footer-item">
+              <img
+                style="margin-top: -60px"
+                src="/images/icons/address.png"
+                alt="JOBO INDIA"
+              />
+              <div>
+                <h4>Address</h4>
+                Plot No.109 To 113, Alpine Industrial Park, Nr. Choryasi Toll
+                Plaza,<br />
+                At-Choryasi, Kamrej, Surat-394150, Gujarat, INDIA
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="links-2">
-        <a href="/">Home</a>
-        <a href="/product.html">About</a>
-        <a href="/about.html">Products</a>
-        <a href="/product.html">Blog</a>
-        <a href="/videos.html">Video</a>
-        <a href="/contact.html">Contact</a>
+        <div class="links-2">
+          <a href="/">Home</a>
+          <a href="/product.html">About</a>
+          <a href="/about.html">Products</a>
+          <a href="/product.html">Blog</a>
+          <a href="/videos.html">Video</a>
+          <a href="/contact.html">Contact</a>
+        </div>
       </div>
 
-    </div>
-
-     
       <div class="Copyright">
         <p>Copyright © 2024 JOBO All Rights Reserved.</p>
       </div>
@@ -1296,22 +1458,22 @@
       });
     </script>
     <script>
-        // Show the modal when the page loads
-        window.onload = function () {
-            document.getElementById("popupModal").style.visibility = "visible";
-            document.getElementById("popupModal").style.opacity = "1";
-        };
+      // Show the modal when the page loads
+      window.onload = function () {
+        document.getElementById("popupModal").style.visibility = "visible";
+        document.getElementById("popupModal").style.opacity = "1";
+      };
 
-        // Function to close the modal
-        function closeModal() {
-            document.getElementById("popupModal").style.opacity = "0";
-            setTimeout(() => {
-                document.getElementById("popupModal").style.visibility = "hidden";
-            }, 300); // Delay to match opacity transition
-        }
+      // Function to close the modal
+      function closeModal() {
+        document.getElementById("popupModal").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("popupModal").style.visibility = "hidden";
+        }, 300); // Delay to match opacity transition
+      }
     </script>
     <script src="script.js"></script>
     <script src="hoverMenu.js"></script>
-     <!--<script src="hideinspect.js"></script> -->
+    <!--<script src="hideinspect.js"></script> -->
   </body>
 </html>

@@ -20,7 +20,7 @@
         display: flex;
         width: 100%;
         max-width: 1200px;
-        height: 307px;
+        height: 400px;
         gap: 15px;
       }
 
@@ -45,21 +45,24 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 0px 20px;
-        gap: 25px;
-        justify-content: center;
+        gap: 20px;
+        justify-content: start;
         align-items: start;
+        padding: 20px;
         background-color: white;
       }
 
       .design-slide-item img {
-        /* width: 100%; */
-        height: 30%;
+        width: 100%;
+        height: 82%;
+        overflow: hidden;
         object-fit: cover;
-        margin: 0 auto;
       }
+
+      /* .design-slide-item img:hover {
+        scale: 1.2;
+      } */
       .design-slide-item h2 {
-        margin-top: 20px;
         font-size: 20px;
         text-align: left;
       }
@@ -109,6 +112,7 @@
         display: flex;
         align-items: center;
         margin-top: 20px;
+        gap: 20px;
       }
 
       .design-cta-button {
@@ -162,29 +166,51 @@
         color: black;
       }
       .design-nav-controls {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+        /* position: absolute; */
+        /* bottom: 10px;
+        right: 20px; */
         display: flex;
         gap: 10px;
       }
 
-      .design-nav-button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #ff7834b4;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+      .design-nav-button svg {
+        width: 25px;
+        height: 25px;
+        fill: white;
       }
 
-      .design-nav-button svg {
-        width: 20px;
-        height: 20px;
-        fill: white;
+      .design-nav-button {
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        padding-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 28px;
+        border-radius: 100%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.296);
+      }
+
+      .design-nav-button.design-prev-btn {
+        background-color: white;
+        color: #ff7834;
+      }
+      .design-nav-button.design-prev-btn:hover {
+        background-color: #ff7834;
+        color: white;
+      }
+      .design-nav-button.design-next-btn {
+        background-color: #ff7834;
+        color: white;
+      }
+
+      .design-nav-button.design-next-btn:hover {
+        background-color: white;
+        color: #ff7834;
       }
       @media screen and (max-width: 768px) {
         .dropdown {
@@ -340,7 +366,9 @@
         style="display: flex; justify-content: space-between; width: 100%"
       >
         <div class="about-content">
-          <h2 class="title">CAP COMPRESSION MOLDING MACHINE</h2>
+          <h1 class="title" style="font-size: 2.3rem">
+            CAP COMPRESSION MOLDING MACHINE
+          </h1>
           <p class="about-text">
             Our Rotary Cap Compression Molding Machine is used to produce
             plastic caps of various types. It uses an advanced process called
@@ -518,14 +546,24 @@
         <div class="tab-content active" id="tab-0">
           <div class="content-with-image">
             <div class="content-text">
-              <img src="./images/icons/feat1.png" alt="Easy to Operate Icon" />
               <p>
                 Our Machine is built with operational style that can easily be
-                managed. it is simple to install and once it.
+                managed. it is simple to install and once it has been installed,
+                it actually requires very little overseeing or monitoring. It
+                however has a user-friendly design where even an operator with
+                limited technical know-how can use with a little training. The
+                controls are not complicated at all.
               </p>
             </div>
             <div class="content-image">
+              <div class="icon">
+                <img
+                  src="./images/icons/feat1.png"
+                  alt="Easy to Operate Icon"
+                />
+              </div>
               <img
+                class="machine-image"
                 src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
@@ -536,11 +574,29 @@
         <div class="tab-content" id="tab-1">
           <div class="content-with-image">
             <div class="content-text">
-              <img src="./images/icons/feat2.png" alt="Easy to Operate Icon" />
-              <p>Our machine is designed to save money in several key areas</p>
+              <p>
+                Our machine is designed to save money in several key areas;
+                <br />
+                <strong>Electricity:</strong> This type of molding process is
+                more energy efficient compared to the common molding machines
+                which therefore saves you money. <br />
+                <strong>Water:</strong> The cooling of the machine uses less
+                water as compared to traditional methods of cooling the
+                machines. <br />
+                <strong> Labor:</strong> Since the machine is fully automated
+                the need for workers to operate the machinery is little, thus
+                lowering the cost of labor.
+              </p>
             </div>
             <div class="content-image">
+              <div class="icon">
+                <img
+                  src="./images/icons/feat2.png"
+                  alt="Easy to Operate Icon"
+                />
+              </div>
               <img
+                class="machine-image"
                 src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
@@ -551,14 +607,23 @@
         <div class="tab-content" id="tab-2">
           <div class="content-with-image">
             <div class="content-text">
-              <img src="./images/icons/feat3.png" alt="Easy to Operate Icon" />
               <p>
                 Another wonderful feature of our machine is that it doesn’t
-                waste any material. All the raw materials are
+                waste any material. All the raw materials are utilized in the
+                production of the caps; thus, the company does not waste
+                anything. This way, many businesses cut costs while also working
+                in ways that are less detrimental to our environment.
               </p>
             </div>
             <div class="content-image">
+              <div class="icon">
+                <img
+                  src="./images/icons/feat3.png"
+                  alt="Easy to Operate Icon"
+                />
+              </div>
               <img
+                class="machine-image"
                 src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
@@ -569,14 +634,23 @@
         <div class="tab-content" id="tab-3">
           <div class="content-with-image">
             <div class="content-text">
-              <img src="./images/icons/feat3.png" alt="Easy to Operate Icon" />
               <p>
                 The machine is designed for the rotary style, which can produce
-                caps at a high speed while maintaining
+                caps at a high speed while maintaining high levels of quality.
+                This means that you will be able to make more caps in less time
+                hence suitable for industries that feel the heat of demand.
               </p>
             </div>
             <div class="content-image">
+              <div class="icon">
+                <img
+                  src="./images/icons/feat4.png"
+                  alt="Easy to Operate Icon"
+                />
+              </div>
+
               <img
+                class="machine-image"
                 src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
@@ -587,14 +661,25 @@
         <div class="tab-content" id="tab-4">
           <div class="content-with-image">
             <div class="content-text">
-              <img src="./images/icons/feat3.png" alt="Easy to Operate Icon" />
               <p>
                 Our Machine is used to produce different Caps including Water
-                Bottle Caps, Juice Caps,
+                Bottle Caps, Juice Caps, Pharmaceuticals, Oils & Lubricants and
+                many more. Let’s explore how our machine works when used to
+                create different designs and sizes of caps. The molds are easily
+                interchangeable, which means that the manufacturers can create
+                various types of caps and switch production easily.
               </p>
             </div>
             <div class="content-image">
+              <div class="icon">
+                <img
+                  src="./images/icons/feat5.png"
+                  alt="Easy to Operate Icon"
+                />
+              </div>
+
               <img
+                class="machine-image"
                 src="https://www.jobomachinery.com/fodder/about2.jpg"
                 alt=""
               />
@@ -771,7 +856,7 @@
           <div class="design-slider-track">
             <div class="design-slide-item">
               <img
-                src="./images/slide1.png"
+                src="./images/new-images/16CS.jpg"
                 alt="16 Cavity Compression Molding Machine"
               />
 
@@ -780,7 +865,7 @@
             </div>
             <div class="design-slide-item">
               <img
-                src="./images/product/prodtwo.png"
+                src="./images/new-images/24CS.jpg"
                 alt="Minimalist living room with white furniture"
               />
               <h2 class="name">24 Cavity Cap Compression Machine</h2>
@@ -788,7 +873,7 @@
             </div>
             <div class="design-slide-item">
               <img
-                src="./images/product/prodtwo.png"
+                src="./images/new-images/36CS.jpg"
                 alt="Luxury bathroom with freestanding tub"
               />
               <h2 class="name">36 CAVITY CAP MAKING MACHINE</h2>
@@ -797,25 +882,12 @@
 
             <div class="design-slide-item">
               <img
-                src="./images/product/prodThree.png"
+                src="./images/new-images/36CSS.jpg"
                 alt="Minimalist living room with white furniture"
-                style="transform: scale(1.2)"
               />
               <h2 class="name">36 Cavity High Speed Cap Machine</h2>
               <!-- <h2 style="margin-top: -20px; color: #fe8237">JOBO - 16CS</h2> -->
             </div>
-          </div>
-          <div class="design-nav-controls">
-            <button class="design-nav-button design-prev-btn">
-              <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-              </svg>
-            </button>
-            <button class="design-nav-button design-next-btn">
-              <svg viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-              </svg>
-            </button>
           </div>
         </div>
 
@@ -826,12 +898,15 @@
               <h1>Recent case Studies</h1>
             </div>
             <div class="design-cta-group">
-              <button class="design-cta-button">Read More</button>
-              <div class="design-arrow-circle">
-                <svg viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                </svg>
+              <div class="design-nav-controls">
+                <button class="design-nav-button design-prev-btn">
+                  &#8249;
+                </button>
+                <button class="design-nav-button design-next-btn">
+                  &#8250;
+                </button>
               </div>
+              <button class="design-cta-button">Read More</button>
             </div>
           </div>
           <svg class="design-bg-pattern" viewBox="0 0 100 100">

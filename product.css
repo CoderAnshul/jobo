@@ -460,7 +460,7 @@ a {
 /* Hero Section Styles */
 .hero {
   position: relative;
-  height: 52vh;
+  height: 25vw;
   width: 100%;
   background-image: url(../images/banner/aboutBanner.png);
   background-position: bottom;
@@ -532,6 +532,9 @@ a {
   justify-content: space-between;
 }
 
+.product-info p {
+  text-align: justify;
+}
 .product-info {
   flex: 1;
   min-width: 300px;
@@ -657,7 +660,7 @@ a {
 
 .auxiliaries-image {
   max-width: 600px;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .spec-box {
@@ -1482,21 +1485,21 @@ table td {
 
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3vw;
   height: auto;
   /*margin-bottom: 50px;*/
 }
 
-.logo-item:hover .logo {
+/* .logo-item:hover .logo {
   transform: translateY(-50%);
-}
+} */
 .logo-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
-  width: 120px;
+  height: 7.5vw;
+  width: 7.5vw;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -1506,24 +1509,29 @@ table td {
 }
 
 .logo-item .logo {
-  height: 200px;
-  width: 120px;
+  height: 8vw;
+  width: 8vw;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .counter-section {
   text-align: center;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 45px 40px;
   width: 40%;
+  height: 440px;
   border-radius: 20px;
 }
 
 .counter {
-  font-size: 120px;
+  font-size: 9vw;
   font-weight: 300;
   color: transparent;
-  -webkit-text-stroke: 1px #c9a55a;
+  -webkit-text-stroke: 1px #ff7834;
   margin-bottom: 20px;
   line-height: 1;
 }
@@ -1536,9 +1544,9 @@ table td {
 }
 
 .counter-contaner span {
-  color: #c9a55a;
+  color: #ff7834;
   font-weight: 600;
-  font-size: 120px;
+  font-size: 8vw;
 }
 
 .tagline {
@@ -1578,6 +1586,17 @@ table td {
 
   .tagline {
     font-size: 16px;
+  }
+
+  .logo-item {
+    height: 100px;
+    width: 100px;
+  }
+
+  .logo-item .logo {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 }
 

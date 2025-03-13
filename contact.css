@@ -678,7 +678,7 @@ padding : 0;
   border: none;
 }
 .hero {
-  height: 52vh;
+  height: 25vw;
 }
 @media (max-width: 768px) {
   .hero {
