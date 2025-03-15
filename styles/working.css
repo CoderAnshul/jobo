@@ -734,6 +734,9 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+  .hero {
+    height: 18vh !important;
+  }
   .footer-content {
     flex-wrap: wrap;
   }
@@ -922,7 +925,6 @@ body {
   height: 280px; /* Adjust as needed */
   border-radius: 10px;
   overflow: hidden;
-  background-color: red;
 }
 
 .video-thumbnail {
@@ -1123,7 +1125,14 @@ body {
     font-size: 16px;
   }
   .nav-items {
-   padding-left: 40px;
+    padding: 0 40px;
+    height: 40px;
+  }
+  .design-slide-item {
+    height: 451px;
+  }
+  .navigation-container {
+    padding: 5px 0 !important;
   }
   .arrow {
     width: 20px;
