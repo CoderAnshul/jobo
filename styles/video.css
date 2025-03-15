@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Song+Myung&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Song+Myung&display=swap");
 
 * {
   margin: 0;
@@ -547,10 +547,11 @@ p {
 
 /* Tab content */
 .tab-content {
-  width: 100vw;
+  width: fit-content;
   padding: 50px 90px;
   display: none;
   background-color: #ffffff;
+  margin: 0 auto;
 }
 
 .tab-content.active {
@@ -869,6 +870,7 @@ Content with image layout .content-with-image {
     padding: 0px 20px;
   }
   .tab-content {
+    
     padding: 0px 20px;
   }
 }
@@ -920,7 +922,9 @@ Content with image layout .content-with-image {
   .desktop-layout {
     display: none;
   }
-
+  .tab-content {
+    margin-top: 20px;
+  }
   .mobile-layout {
     display: block;
   }

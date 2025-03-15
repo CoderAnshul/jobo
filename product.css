@@ -532,6 +532,19 @@ a {
   justify-content: space-between;
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .product-image {
+    max-width: 800px !important;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .product-image {
+    max-width: 600px !important;
+    margin-top: 20px;
+  }
+}
+
 .product-info p {
   text-align: justify;
 }

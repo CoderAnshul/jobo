@@ -491,7 +491,7 @@ body {
   max-width: 1087px;
   gap: 60px;
   margin: 0 auto;
-  margin-right: 300px;
+  /* margin-right: 300px; */
 }
 
 .content-image {
@@ -756,8 +756,15 @@ body {
 
   .content-with-image {
     margin-right: 0;
-    height: 500px;
+    height: fit-content;
+    margin: 0;
     flex-direction: column;
+  }
+  .content-with-image .icon {
+    top: 20%;
+  }
+  .content-image img .icon img {
+    margin-top: 100px !important;
   }
   .content-image {
     position: relative;
@@ -773,7 +780,7 @@ body {
     width: fit-content;
   }
 
-  .content-image img {
+  .content-image .machine-image img {
     margin-top: -100px;
   }
 
@@ -785,6 +792,9 @@ body {
   }
   .content-with-image .content-image {
     margin-right: 0%;
+  }
+  .container {
+    padding: 0 !important;
   }
   .content-text p {
     width: 100%;
