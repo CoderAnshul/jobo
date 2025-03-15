@@ -34,7 +34,9 @@
         height: fit-content;
         max-width: 600px;
       }
-
+      .image-2-new {
+        display: none;
+      }
       /* Image inside modal */
       .modal-content img {
         width: 100%;
@@ -59,7 +61,7 @@
       .cta-button {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 16px;
         /*background-color: #ff7834;*/
         color: black;
         padding: 10px 0px 10px 0px;
@@ -74,7 +76,7 @@
         text-decoration: none !important;
       }
       .cta-button:hover {
-        transform: translateY(-2px);
+        color: #ff7834;
       }
       .cta-button:hover .button-arrow {
         margin-left: 10px;
@@ -84,16 +86,16 @@
       .button-arrow {
         /* margin-left: 12px; */
         font-size: 34px;
-        padding-bottom: 2px;
+        padding-bottom: 5px;
         height: 35px;
         width: 35px;
         border-radius: 4px;
-        background-color: white;
-        border: 1px solid white;
+        /* background-color: white; */
+        /* border: 1px solid white; */
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #ff7834;
+        color: black;
         transition: all 0.3s ease;
       }
       .arrow {
@@ -103,13 +105,20 @@
         transition: transform 0.3s ease;
       }
 
-      .cta-button:hover .arrow {
-        transform: translateX(5px);
+      .cta-button:hover .button-arrow {
+        transform: translateX(4px);
+        color: #ff7834;
       }
 
       @media screen and (max-width: 768px) {
         .dropdown {
           text-align: center;
+        }
+        .image-1-old {
+          display: none;
+        }
+        .image-2-new {
+          display: block;
         }
       }
       .slider-container {
@@ -587,7 +596,16 @@
       <div class="history-content" style="overflow: auto">
         <h2 class="title">Our Journey of Innovation</h2>
         <div class="history-wrapper">
-          <img src="./images/banner/history.png" alt="history-image" />
+          <img
+            src="./images/banner/history.png"
+            class="image-1-old"
+            alt="history-image"
+          />
+          <img
+            src="./images/JOBO WEBSITE CHART vertical.jpg"
+            class="image-2-new"
+            alt="history-image"
+          />
         </div>
       </div>
     </section>
@@ -1474,6 +1492,6 @@
     </script>
     <script src="script.js"></script>
     <script src="hoverMenu.js"></script>
-    <script src="hideinspect.js"></script>
+    <!-- <script src="hideinspect.js"></script> -->
   </body>
 </html>
