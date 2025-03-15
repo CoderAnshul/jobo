@@ -1067,6 +1067,7 @@ table td {
   max-width: 1100px;
   margin: 0 auto;
   margin-top: 20px;
+  padding-left: 21.5vw;
 }
 .links-2 a {
   padding-bottom: 20px;
@@ -1284,7 +1285,7 @@ table td {
 
 @media screen and (max-width: 576px) {
   .footer {
-    padding: 0px 20px 40px 15px;
+    padding: 0px 20px 40px 15px!important;
   }
 
   .footer-content {
@@ -1372,7 +1373,7 @@ table td {
 
 @media screen and (max-width: 576px) {
   .footer {
-    padding: 0px 20px 40px 15px;
+    padding: 0px 20px 40px 15px!important;
   }
 
   .footer-content {
@@ -1500,7 +1501,7 @@ table td {
 }
 .logo-showcase {
   padding: 40px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 .logo-grid {
@@ -1536,7 +1537,7 @@ table td {
 
 .counter-section {
   text-align: center;
-  background-color: white;
+  background-color: #f8f8f8;
   display: flex;
   justify-content: center;
   align-items: center;
