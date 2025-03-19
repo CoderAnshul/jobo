@@ -565,9 +565,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
   margin-top: 20px;
-  padding-left: 21.5vw;
+  padding-left: 20.5vw;
 }
 .links-2 a {
   padding-bottom: 20px;
@@ -650,8 +652,7 @@ body {
 }
 
 .social-icon:hover {
-  background-color: #fff;
-  color: #333;
+  transform: scale(1.08);
 }
 
 .get-direction {
@@ -701,7 +702,7 @@ body {
 }
 
 .products a {
-  display: block;
+  display: flex;
   color: #fff;
   text-decoration: none;
   /* margin-bottom: 10px; */
@@ -835,7 +836,7 @@ body {
 
 @media screen and (max-width: 576px) {
   .footer {
-    padding: 0px 20px 40px 15px!important;
+    padding: 0px 20px 40px 15px !important;
   }
 
   .footer-content {
@@ -1403,20 +1404,20 @@ body {
   }
 }
 
-@media (min-width:1000px) and (max-width: 1199px) {
+@media (min-width: 1000px) and (max-width: 1199px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 20px;
-    padding-left: 24.5vw;
+    padding-left: 30.5vw;
   }
 }
-@media (min-width:1200px) and (max-width: 1350px) {
+@media (min-width: 1200px) and (max-width: 1350px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1429,7 +1430,7 @@ body {
     padding-left: 25.5vw;
   }
 }
-@media (min-width:1351px) and (max-width: 1460px) {
+@media (min-width: 1351px) and (max-width: 1460px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1442,7 +1443,7 @@ body {
     padding-left: 22.5vw;
   }
 }
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1455,7 +1456,7 @@ body {
     padding-left: 0vw;
   }
 }
-@media (min-width:1700px)  {
+@media (min-width: 1700px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1468,4 +1469,3 @@ body {
     padding-left: 330px;
   }
 }
-

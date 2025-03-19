@@ -1,4 +1,4 @@
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Song+Myung&display=swap");
 
 * {
   margin: 0;
@@ -97,7 +97,6 @@ p {
   border-right: 2px solid rgba(0, 0, 0, 0.534);
   padding-right: 20px;
   text-align: center !important;
-
 }
 
 .nav-links a {
@@ -872,7 +871,6 @@ Content with image layout .content-with-image {
     padding: 0px 20px;
   }
   .tab-content {
-    
     padding: 0px 20px;
   }
 }
@@ -1211,11 +1209,11 @@ Content with image layout .content-with-image {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 36px;
   max-width: 1100px;
   margin: 0 auto;
   margin-top: 20px;
-  padding-left: 21.5vw;
+  padding-left: 20.5vw;
 }
 .links-2 a {
   padding-bottom: 20px;
@@ -1298,8 +1296,7 @@ Content with image layout .content-with-image {
 }
 
 .social-icon:hover {
-  background-color: #fff;
-  color: #333;
+  transform: scale(1.08);
 }
 
 .get-direction {
@@ -1342,7 +1339,7 @@ Content with image layout .content-with-image {
 }
 
 .products a {
-  display: block;
+  display: flex;
   color: #fff;
   text-decoration: none;
   margin-bottom: 20px;
@@ -1420,7 +1417,7 @@ Content with image layout .content-with-image {
 
 @media screen and (max-width: 576px) {
   .footer {
-    padding: 0px 20px 40px 15px!important;
+    padding: 0px 20px 40px 15px !important;
   }
 
   .footer-content {
@@ -1458,20 +1455,20 @@ Content with image layout .content-with-image {
     font-size: 14px;
   }
 }
-@media (min-width:1000px) and (max-width: 1199px) {
+@media (min-width: 1000px) and (max-width: 1199px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 40px !important;
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 20px;
-    padding-left: 24.5vw;
+    padding-left: 26.5vw;
   }
 }
-@media (min-width:1200px) and (max-width: 1350px) {
+@media (min-width: 1200px) and (max-width: 1350px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1484,7 +1481,7 @@ Content with image layout .content-with-image {
     padding-left: 25.5vw;
   }
 }
-@media (min-width:1351px) and (max-width: 1460px) {
+@media (min-width: 1351px) and (max-width: 1460px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1497,7 +1494,7 @@ Content with image layout .content-with-image {
     padding-left: 22.5vw;
   }
 }
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1510,7 +1507,7 @@ Content with image layout .content-with-image {
     padding-left: 0vw;
   }
 }
-@media (min-width:1700px)  {
+@media (min-width: 1700px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
@@ -1523,4 +1520,3 @@ Content with image layout .content-with-image {
     padding-left: 330px;
   }
 }
-
