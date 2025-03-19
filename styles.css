@@ -1030,7 +1030,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   margin-top: 20px;
-  padding-left: 20.5vw;
+  padding-left: 16vw;
 }
 .links-2 a {
   padding-bottom: 20px;
@@ -1399,19 +1399,33 @@ body {
   }
 }
 
+@media (max-width: 999px) {
+  .links-2 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 0px !important;
+  }
+}
 @media (min-width: 1000px) and (max-width: 1199px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 20;
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 20px;
-    padding-left: 24.5vw;
+    padding-left: 26.5vw;
   }
 }
+
 @media (min-width: 1200px) and (max-width: 1350px) {
   .links-2 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.06);
@@ -1431,7 +1445,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 4vw;
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 20px;
