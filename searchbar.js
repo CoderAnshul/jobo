@@ -79,10 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Product data
   const products = [
-    { name: "Laptop", link: "laptop.html" },
-    { name: "Smartphone", link: "smartphone.html" },
-    { name: "Tablet", link: "tablet.html" },
-    { name: "Smartwatch", link: "smartwatch.html" },
+    { name: "16 Cavity Compression Molding Machine", link: "product.html" },
+    { name: "24 Cavity Cap Compression Machine", link: "product-two.html" },
+    { name: "36 Cavity Cap Making Machine", link: "product-three.html" },
+    { name: "36 Cavity High Speed Cap Machine", link: "product-four.html" },
+    { name: "Cap Folding Machine", link: "auxiliaries-1.html" },
+    { name: "Cap Cooler Machine", link: "auxiliaries-2.html" },
+    { name: "Cap Slitting Machine", link: "auxiliaries-3.html" },
+    { name: "Cap Lining Machine", link: "auxiliaries-4.html" },
   ];
 
   // Toggle search bar animation
