@@ -92,22 +92,22 @@
                 <h2 >
                   Send your <span style="color: #ff7834">Message To Us</span>
                 </h2>
-                <form class="jobo-form">
+                <form class="jobo-form" action="contact.php" method="POST">
                   <input
-                    type="text"
+                    type="text" name="name"
                     class="jobo-form-input"
                     placeholder="First Name"
                     required
                   />
                   <input
-                    type="email"
+                    type="email" name="email"
                     class="jobo-form-input"
                     placeholder="E-mail Address"
                     required
                   />
                   <textarea
                     class="jobo-form-textarea"
-                    placeholder="Message"
+                    placeholder="Message" name="message" required
                   ></textarea>
                   <button type="submit" class="jobo-submit-btn">
                     SUBMIT
